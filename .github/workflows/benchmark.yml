@@ -1,0 +1,62 @@
+name: Benchmarks
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      old:
+        description: 'Old'
+        required: false
+        default: 'main'
+      new:
+        description: 'New'
+        required: true
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ (github.event.inputs.new != '') && github.event.inputs.new || github.event.ref }}
+      - uses: ./.github/actions/setup-go-for-project
+
+
+      - name: Install benchstat
+        run: go install golang.org/x/perf/cmd/benchstat@latest
+
+      - name: Run benchmarks
+        run: go test -bench=. -benchmem -count=10  ./... > new
+
+      - name: Run benchmark for base code
+        run: |
+          git fetch origin main ${{ github.event.pull_request.base.sha }}
+          HEAD="$(git rev-parse HEAD)"
+          git reset --hard ${{ github.event.pull_request.base.sha }}
+          go test -bench=. -benchmem -count=10  ./... > old
+          git reset --hard "$HEAD"
+
+      - name: Compare benchmarks
+        run: |
+          EOF="$(dd if=/dev/urandom bs=15 count=1 status=none | base64)"
+          {
+            echo "RESULT<<$EOF"
+            benchstat old new
+            echo "$EOF"
+          } >> "$GITHUB_ENV"
+
+      - name: Comment benchmark result
+        continue-on-error: true
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          recreate: true
+          message: |
+            ```
+            ${{ env.RESULT }}
+            ```
