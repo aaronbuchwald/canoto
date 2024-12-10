@@ -17,6 +17,17 @@ type Scalars struct {
 	String             string             `canoto:"bytes,12"`
 	Bytes              []byte             `canoto:"bytes,13"`
 	LargestFieldNumber LargestFieldNumber `canoto:"bytes,14"`
+	RepeatedInt32      []int32            `canoto:"int,15"`
+	RepeatedInt64      []int64            `canoto:"int,16"`
+	RepeatedUint32     []uint32           `canoto:"int,17"`
+	RepeatedUint64     []uint64           `canoto:"int,18"`
+	RepeatedSint32     []int32            `canoto:"sint,19"`
+	RepeatedSint64     []int64            `canoto:"sint,20"`
+	RepeatedFixed32    []uint32           `canoto:"fint,21"`
+	RepeatedFixed64    []uint64           `canoto:"fint,22"`
+	RepeatedSfixed32   []int32            `canoto:"fint,23"`
+	RepeatedSfixed64   []int64            `canoto:"fint,24"`
+	RepeatedBool       []bool             `canoto:"bool,25"`
 
 	canotoData canotoData_Scalars
 }

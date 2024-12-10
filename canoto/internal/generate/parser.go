@@ -18,7 +18,6 @@ var (
 	errUnexpectedNumberOfIdentifiers       = errors.New("unexpected number of identifiers")
 	errMalformedTag                        = errors.New("expected type,fieldNumber got")
 	errFixedLengthArraysUnsupported        = errors.New("fixed length arrays are not supported")
-	errRepeatedFieldsUnsupported           = errors.New("repeated fields are not supported")
 	errStructContainsDuplicateFieldNumbers = errors.New("struct contains duplicate field numbers")
 )
 
@@ -108,45 +107,71 @@ func parseField(fs *token.FileSet, canonicalizedStructName string, af *ast.Field
 		canotoType:        canotoType,
 		fieldNumber:       fieldNumber,
 	}
-	switch t := af.Type.(type) {
+
+	goT, innerExpr, err := unwrapType(fs, af.Type)
+	if err != nil {
+		return field{}, false, err
+	}
+	if innerExpr == nil {
+		f.goType = goType(goT)
+		f.templateArgs, err = makeTemplateArgs(canonicalizedStructName, f)
+		return f, true, err
+	}
+
+	goT, innerExpr, err = unwrapType(fs, innerExpr)
+	if err != nil {
+		return field{}, false, err
+	}
+	if innerExpr == nil {
+		if goT == "byte" {
+			f.goType = goBytes
+		} else {
+			f.repeated = true
+			f.goType = goType(goT)
+		}
+		f.templateArgs, err = makeTemplateArgs(canonicalizedStructName, f)
+		return f, true, err
+	}
+
+	goT, innerExpr, err = unwrapType(fs, innerExpr)
+	if err != nil {
+		return field{}, false, err
+	}
+	if innerExpr != nil || goT != "byte" {
+		return field{}, false, fmt.Errorf("%w %T at %s",
+			errUnexpectedGoType,
+			innerExpr,
+			fs.Position(innerExpr.Pos()),
+		)
+	}
+
+	f.repeated = true
+	f.goType = goBytes
+	f.templateArgs, err = makeTemplateArgs(canonicalizedStructName, f)
+	return f, true, err
+}
+
+func unwrapType(fs *token.FileSet, expr ast.Expr) (string, ast.Expr, error) {
+	switch t := expr.(type) {
 	case *ast.Ident:
-		f.goType = goType(t.Name)
+		return t.Name, nil, nil
 	case *ast.ArrayType:
 		// TODO: Support fixed length arrays
 		if t.Len != nil {
-			return field{}, false, fmt.Errorf("%w at %s",
+			return "", nil, fmt.Errorf("%w at %s",
 				errFixedLengthArraysUnsupported,
 				fs.Position(t.Len.Pos()),
 			)
 		}
 
-		ident, ok := t.Elt.(*ast.Ident)
-		if !ok {
-			return field{}, false, fmt.Errorf("%w %T at %s",
-				errUnexpectedGoType,
-				t.Elt,
-				fs.Position(t.Elt.Pos()),
-			)
-		}
-
-		if ident.Name == "byte" {
-			f.goType = goBytes
-		} else {
-			return field{}, false, fmt.Errorf("%w at %s",
-				errRepeatedFieldsUnsupported,
-				fs.Position(t.Elt.Pos()),
-			)
-		}
+		return "", t.Elt, nil
 	default:
-		return field{}, false, fmt.Errorf("%w %T at %s",
+		return "", nil, fmt.Errorf("%w %T at %s",
 			errUnexpectedGoType,
 			t,
-			fs.Position(af.Pos()),
+			fs.Position(expr.Pos()),
 		)
 	}
-
-	f.templateArgs, err = makeTemplateArgs(canonicalizedStructName, f)
-	return f, true, err
 }
 
 // canonicalizeName replaces "_" with "_1" to avoid collisions with "__" which
@@ -220,24 +245,29 @@ func makeTemplateArgs(structName string, field field) (map[string]string, error)
 		"wireType":          wireType.String(),
 		"fieldName":         field.name,
 		"escapedFieldName":  field.canonicalizedName,
+		"goType":            string(field.goType),
 	}
 	switch field.canotoType {
 	case canotoInt:
 		args["readFunction"] = fmt.Sprintf("Int[%s]", field.goType)
+		args["sizeFunction"] = "Int"
 	case canotoSint:
 		args["readFunction"] = fmt.Sprintf("Sint[%s]", field.goType)
+		args["sizeFunction"] = "Sint"
 	case canotoFint:
 		switch field.goType {
 		case goInt32, goUint32:
 			args["readFunction"] = fmt.Sprintf("Fint32[%s]", field.goType)
-			args["bitSize"] = "32"
+			args["sizeConstant"] = "Fint32"
 		case goInt64, goUint64:
 			args["readFunction"] = fmt.Sprintf("Fint64[%s]", field.goType)
-			args["bitSize"] = "64"
+			args["sizeConstant"] = "Fint64"
 		default:
 			return nil, fmt.Errorf("%w: %q should have fixed size", errUnexpectedGoType, field.goType)
 		}
 	case canotoBool:
+		args["readFunction"] = "Bool"
+		args["sizeConstant"] = "Bool"
 	case canotoBytes:
 		switch field.goType {
 		case goString:
