@@ -10,6 +10,7 @@ import (
 type field struct {
 	name              string
 	canonicalizedName string
+	fixedLength       [2]bool
 	repeated          bool
 	goType            goType
 	canotoType        canotoType

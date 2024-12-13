@@ -17,7 +17,6 @@ const canotoTag = "canoto"
 var (
 	errUnexpectedNumberOfIdentifiers       = errors.New("unexpected number of identifiers")
 	errMalformedTag                        = errors.New("expected type,fieldNumber got")
-	errFixedLengthArraysUnsupported        = errors.New("fixed length arrays are not supported")
 	errStructContainsDuplicateFieldNumbers = errors.New("struct contains duplicate field numbers")
 )
 
@@ -108,7 +107,7 @@ func parseField(fs *token.FileSet, canonicalizedStructName string, af *ast.Field
 		fieldNumber:       fieldNumber,
 	}
 
-	goT, innerExpr, err := unwrapType(fs, af.Type)
+	firstFixedLength, goT, innerExpr, err := unwrapType(fs, af.Type)
 	if err != nil {
 		return field{}, false, err
 	}
@@ -118,10 +117,12 @@ func parseField(fs *token.FileSet, canonicalizedStructName string, af *ast.Field
 		return f, true, err
 	}
 
-	goT, innerExpr, err = unwrapType(fs, innerExpr)
+	secondFixedLength, goT, innerExpr, err := unwrapType(fs, innerExpr)
 	if err != nil {
 		return field{}, false, err
 	}
+	f.fixedLength = [2]bool{firstFixedLength, secondFixedLength}
+
 	if innerExpr == nil {
 		if goT == "byte" {
 			f.goType = goBytes
@@ -133,7 +134,7 @@ func parseField(fs *token.FileSet, canonicalizedStructName string, af *ast.Field
 		return f, true, err
 	}
 
-	goT, innerExpr, err = unwrapType(fs, innerExpr)
+	_, goT, innerExpr, err = unwrapType(fs, innerExpr)
 	if err != nil {
 		return field{}, false, err
 	}
@@ -151,22 +152,14 @@ func parseField(fs *token.FileSet, canonicalizedStructName string, af *ast.Field
 	return f, true, err
 }
 
-func unwrapType(fs *token.FileSet, expr ast.Expr) (string, ast.Expr, error) {
+func unwrapType(fs *token.FileSet, expr ast.Expr) (bool, string, ast.Expr, error) {
 	switch t := expr.(type) {
 	case *ast.Ident:
-		return t.Name, nil, nil
+		return false, t.Name, nil, nil
 	case *ast.ArrayType:
-		// TODO: Support fixed length arrays
-		if t.Len != nil {
-			return "", nil, fmt.Errorf("%w at %s",
-				errFixedLengthArraysUnsupported,
-				fs.Position(t.Len.Pos()),
-			)
-		}
-
-		return "", t.Elt, nil
+		return t.Len != nil, "", t.Elt, nil
 	default:
-		return "", nil, fmt.Errorf("%w %T at %s",
+		return false, "", nil, fmt.Errorf("%w %T at %s",
 			errUnexpectedGoType,
 			t,
 			fs.Position(expr.Pos()),
