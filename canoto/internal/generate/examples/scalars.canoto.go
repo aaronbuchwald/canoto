@@ -80,7 +80,11 @@ const (
 	canoto__Scalars__FixedRepeatedFixedBytes__tag = "\xf2\x03" // canoto.Tag(62, canoto.Len)
 	canoto__Scalars__FixedRepeatedLargestFieldNumber__tag = "\xfa\x03" // canoto.Tag(63, canoto.Len)
 	canoto__Scalars__ConstRepeatedUint64__tag = "\x82\x04" // canoto.Tag(64, canoto.Len)
+	canoto__Scalars__CustomType__tag = "\x8a\x04" // canoto.Tag(65, canoto.Len)
 )
+
+// Ensure that the generated methods correctly implement the interface
+var _ canoto.Message = (*Scalars)(nil)
 
 type canotoData_Scalars struct {
 	size int
@@ -111,6 +115,10 @@ type canotoData_Scalars struct {
 	ConstRepeatedUint64Size int
 }
 
+// UnmarshalCanoto unmarshals a Canoto-encoded byte slice into the struct.
+//
+// The struct is not cleared before unmarshaling, any fields not present in the
+// bytes will retain their previous values.
 func (c *Scalars) UnmarshalCanoto(bytes []byte) error {
 	r := canoto.Reader{
 		B: bytes,
@@ -118,6 +126,13 @@ func (c *Scalars) UnmarshalCanoto(bytes []byte) error {
 	return c.UnmarshalCanotoFrom(&r)
 }
 
+// UnmarshalCanotoFrom populates the struct from a canoto.Reader. Most users
+// should just use UnmarshalCanoto.
+//
+// The struct is not cleared before unmarshaling, any fields not present in the
+// bytes will retain their previous values.
+//
+// This function enables configuration of reader options.
 func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 	var minField uint32
 	for canoto.HasNext(r) {
@@ -132,7 +147,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 		switch field {
 		case 1:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Int8, err = canoto.ReadInt[int8](r)
 			if err != nil {
@@ -143,7 +158,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 2:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Int16, err = canoto.ReadInt[int16](r)
 			if err != nil {
@@ -154,7 +169,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 3:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Int32, err = canoto.ReadInt[int32](r)
 			if err != nil {
@@ -165,7 +180,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 4:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Int64, err = canoto.ReadInt[int64](r)
 			if err != nil {
@@ -176,7 +191,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 5:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Uint8, err = canoto.ReadInt[uint8](r)
 			if err != nil {
@@ -187,7 +202,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 6:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Uint16, err = canoto.ReadInt[uint16](r)
 			if err != nil {
@@ -198,7 +213,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 7:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Uint32, err = canoto.ReadInt[uint32](r)
 			if err != nil {
@@ -209,7 +224,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 8:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Uint64, err = canoto.ReadInt[uint64](r)
 			if err != nil {
@@ -220,7 +235,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 9:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Sint8, err = canoto.ReadSint[int8](r)
 			if err != nil {
@@ -231,7 +246,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 10:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Sint16, err = canoto.ReadSint[int16](r)
 			if err != nil {
@@ -242,7 +257,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 11:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Sint32, err = canoto.ReadSint[int32](r)
 			if err != nil {
@@ -253,7 +268,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 12:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Sint64, err = canoto.ReadSint[int64](r)
 			if err != nil {
@@ -264,7 +279,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 13:
 			if wireType != canoto.I32 {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Fixed32, err = canoto.ReadFint32[uint32](r)
 			if err != nil {
@@ -275,7 +290,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 14:
 			if wireType != canoto.I64 {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Fixed64, err = canoto.ReadFint64[uint64](r)
 			if err != nil {
@@ -286,7 +301,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 15:
 			if wireType != canoto.I32 {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Sfixed32, err = canoto.ReadFint32[int32](r)
 			if err != nil {
@@ -297,7 +312,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 16:
 			if wireType != canoto.I64 {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Sfixed64, err = canoto.ReadFint64[int64](r)
 			if err != nil {
@@ -308,7 +323,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 17:
 			if wireType != canoto.Varint {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Bool, err = canoto.ReadBool(r)
 			if err != nil {
@@ -319,7 +334,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 18:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.String, err = canoto.ReadString(r)
 			if err != nil {
@@ -330,7 +345,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 19:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 			c.Bytes, err = canoto.ReadBytes(r)
 			if err != nil {
@@ -341,7 +356,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 20:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -364,7 +379,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 21:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -392,7 +407,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 22:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -420,7 +435,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 23:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -448,7 +463,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 24:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -476,7 +491,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 25:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -504,7 +519,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 26:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -532,7 +547,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 27:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -560,7 +575,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 28:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -588,7 +603,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 29:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -616,7 +631,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 30:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -644,7 +659,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 31:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -672,7 +687,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 32:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -700,7 +715,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 33:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -729,7 +744,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 34:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -758,7 +773,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 35:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -787,7 +802,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 36:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -816,7 +831,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 37:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -845,7 +860,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = remainingBytes
 		case 38:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			v, err := canoto.ReadString(r)
@@ -870,7 +885,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 39:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			v, err := canoto.ReadBytes(r)
@@ -895,7 +910,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 40:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -939,7 +954,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 41:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -970,7 +985,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 42:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1001,7 +1016,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 43:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1032,7 +1047,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 44:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1063,7 +1078,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 45:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1094,7 +1109,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 46:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1125,7 +1140,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 47:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1156,7 +1171,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 48:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1187,7 +1202,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 49:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1218,7 +1233,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 50:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1249,7 +1264,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 51:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1280,7 +1295,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 52:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1311,7 +1326,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 53:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1342,7 +1357,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 54:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1373,7 +1388,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 55:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1404,7 +1419,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 56:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1435,7 +1450,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 57:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1466,7 +1481,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 58:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			v, err := canoto.ReadString(r)
@@ -1493,7 +1508,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 59:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			length, err := canoto.ReadInt[int32](r)
@@ -1519,7 +1534,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			r.B = r.B[expectedLength:]
 		case 60:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			length, err := canoto.ReadInt[int32](r)
@@ -1565,7 +1580,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 61:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			v, err := canoto.ReadBytes(r)
@@ -1592,7 +1607,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 62:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			length, err := canoto.ReadInt[int32](r)
@@ -1638,7 +1653,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 63:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1684,7 +1699,7 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			}
 		case 64:
 			if wireType != canoto.Len {
-				return canoto.ErrInvalidWireType
+				return canoto.ErrUnexpectedWireType
 			}
 
 			originalUnsafe := r.Unsafe
@@ -1713,6 +1728,29 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 			if canoto.IsZero(c.ConstRepeatedUint64) {
 				return canoto.ErrZeroValue
 			}
+		case 65:
+			if wireType != canoto.Len {
+				return canoto.ErrUnexpectedWireType
+			}
+
+			originalUnsafe := r.Unsafe
+			r.Unsafe = true
+			msgBytes, err := canoto.ReadBytes(r)
+			r.Unsafe = originalUnsafe
+			if err != nil {
+				return err
+			}
+			if len(msgBytes) == 0 {
+				return canoto.ErrZeroValue
+			}
+
+			remainingBytes := r.B
+			r.B = msgBytes
+			err = c.CustomType.UnmarshalCanotoFrom(r)
+			r.B = remainingBytes
+			if err != nil {
+				return err
+			}
 		default:
 			return canoto.ErrUnknownField
 		}
@@ -1722,6 +1760,11 @@ func (c *Scalars) UnmarshalCanotoFrom(r *canoto.Reader) error {
 	return nil
 }
 
+// ValidCanoto validates that the struct can be correctly marshaled into the
+// Canoto format.
+//
+// Specifically, ValidCanoto ensures that all strings are valid utf-8 and all
+// custom types are ValidCanoto.
 func (c *Scalars) ValidCanoto() bool {
 	if !utf8.ValidString(c.String) {
 		return false
@@ -1749,9 +1792,16 @@ func (c *Scalars) ValidCanoto() bool {
 			return false
 		}
 	}
+	if !c.CustomType.ValidCanoto() {
+		return false
+	}
 	return true
 }
 
+// CalculateCanotoSize calculates the size of the Canoto representation and
+// caches it.
+//
+// It is not safe to call this function concurrently.
 func (c *Scalars) CalculateCanotoSize() int {
 	c.canotoData.size = 0
 	if !canoto.IsZero(c.Int8) {
@@ -2084,13 +2134,28 @@ func (c *Scalars) CalculateCanotoSize() int {
 		}
 		c.canotoData.size += len(canoto__Scalars__ConstRepeatedUint64__tag) + canoto.SizeInt(int64(c.canotoData.ConstRepeatedUint64Size)) + c.canotoData.ConstRepeatedUint64Size
 	}
+	if fieldSize := c.CustomType.CalculateCanotoSize(); fieldSize != 0 {
+		c.canotoData.size += len(canoto__Scalars__CustomType__tag) + canoto.SizeInt(int64(fieldSize)) + fieldSize
+	}
 	return c.canotoData.size
 }
 
+// CachedCanotoSize returns the previously calculated size of the Canoto
+// representation from CalculateCanotoSize.
+//
+// If CalculateCanotoSize has not yet been called, it will return 0.
+//
+// If the struct has been modified since the last call to CalculateCanotoSize,
+// the returned size may be incorrect.
 func (c *Scalars) CachedCanotoSize() int {
 	return c.canotoData.size
 }
 
+// MarshalCanoto returns the Canoto representation of this struct.
+//
+// It is assumed that this struct is ValidCanoto.
+//
+// It is not safe to call this function concurrently.
 func (c *Scalars) MarshalCanoto() []byte {
 	w := canoto.Writer{
 		B: make([]byte, 0, c.CalculateCanotoSize()),
@@ -2099,6 +2164,15 @@ func (c *Scalars) MarshalCanoto() []byte {
 	return w.B
 }
 
+// MarshalCanotoInto writes the struct into a canoto.Writer. Most users should
+// just use MarshalCanoto.
+//
+// It is assumed that CalculateCanotoSize has been called since the last
+// modification to this struct.
+//
+// It is assumed that this struct is ValidCanoto.
+//
+// It is not safe to call this function concurrently.
 func (c *Scalars) MarshalCanotoInto(w *canoto.Writer) {
 	if !canoto.IsZero(c.Int8) {
 		canoto.Append(w, canoto__Scalars__Int8__tag)
@@ -2494,5 +2568,10 @@ func (c *Scalars) MarshalCanotoInto(w *canoto.Writer) {
 		for _, v := range c.ConstRepeatedUint64 {
 			canoto.AppendInt(w, v)
 		}
+	}
+	if fieldSize := c.CustomType.CachedCanotoSize(); fieldSize != 0 {
+		canoto.Append(w, canoto__Scalars__CustomType__tag)
+		canoto.AppendInt(w, int64(fieldSize))
+		c.CustomType.MarshalCanotoInto(w)
 	}
 }
