@@ -33,7 +33,7 @@ const (
 	MaxFieldNumber = 1<<29 - 1
 
 	// Version is the current version of the canoto library.
-	Version = "v0.10.1"
+	Version = "v0.11.0"
 
 	wireTypeLength = 3
 	wireTypeMask   = 0x07
@@ -151,6 +151,9 @@ type (
 	Reader struct {
 		B      []byte
 		Unsafe bool
+		// Context is a user-defined value that can be used to pass additional
+		// state during the unmarshaling process.
+		Context any
 	}
 
 	// Writer contains all the state needed to marshal a Canoto type.
