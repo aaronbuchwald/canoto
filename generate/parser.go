@@ -318,7 +318,7 @@ func parseFieldTag(fs *token.FileSet, field *ast.Field) (
 		)
 	}
 
-	if len(tag.Options) > 2 {
+	if len(tag.Options) > 2 || len(tag.Options) < 1 {
 		return "", 0, "", false, fmt.Errorf("%w %q at %s",
 			errMalformedTag,
 			tag.Value(),
