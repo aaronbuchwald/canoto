@@ -26,10 +26,6 @@ const (
 )
 
 type canotoData_justAnInt struct {
-	// Enforce noCopy before atomic usage.
-	// See https://github.com/StephenButtolph/canoto/pull/32
-	_ atomic.Int64
-
 	size int
 }
 
@@ -112,10 +108,13 @@ func (c *justAnInt) CalculateCanotoCache() {
 	if c == nil {
 		return
 	}
-	c.canotoData.size = 0
+	var (
+		size int
+	)
 	if !canoto.IsZero(c.Int8) {
-		c.canotoData.size += len(canoto__justAnInt__Int8__tag) + canoto.SizeInt(c.Int8)
+		size += len(canoto__justAnInt__Int8__tag) + canoto.SizeInt(c.Int8)
 	}
+	c.canotoData.size = size
 }
 
 // CachedCanotoSize returns the previously calculated size of the Canoto
@@ -129,7 +128,7 @@ func (c *justAnInt) CachedCanotoSize() int {
 	if c == nil {
 		return 0
 	}
-	return c.canotoData.size
+	return int(c.canotoData.size)
 }
 
 // MarshalCanoto returns the Canoto representation of this struct.
