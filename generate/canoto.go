@@ -82,6 +82,8 @@ package ${package}
 
 import (
 	"io"
+	"reflect"
+	"slices"
 	"sync/atomic"
 	"unicode/utf8"
 ${canotoImport})
@@ -90,6 +92,7 @@ ${canotoImport})
 var (
 	_ atomic.Int64
 
+	_ = slices.Index[[]reflect.Type, reflect.Type]
 	_ = io.ErrUnexpectedEOF
 	_ = utf8.ValidString
 )
@@ -129,6 +132,19 @@ ${tagConstants})
 
 type canotoData_${structName} struct {
 ${sizeCache}${oneOfCache}}
+
+// CanotoSpec returns the specification of this canoto message.
+func (*${structName}${generics}) CanotoSpec(types ...reflect.Type) *${selector}Spec {
+	types = append(types, reflect.TypeOf(${structName}${generics}{}))
+	var zero ${structName}${generics}
+	s := &${selector}Spec{
+		Name: "${structName}",
+		Fields: []*${selector}FieldType{
+${spec}		},
+	}
+	s.CalculateCanotoCache()
+	return s
+}
 
 // MakeCanoto creates a new empty value.
 func (*${structName}${generics}) MakeCanoto() *${structName}${generics} {
@@ -262,6 +278,7 @@ ${marshal}	return w
 		"selector":            canotoSelector,
 		"sizeCache":           makeSizeCache(m),
 		"oneOfCache":          makeOneOfCache(m),
+		"spec":                makeSpec(m),
 		"unmarshal":           makeUnmarshal(m),
 		"validOneOf":          makeValidOneOf(m),
 		"valid":               makeValid(m),
@@ -395,6 +412,266 @@ func makeOneOfCache(m message) string {
 		_, _ = fmt.Fprintf(&s, template, oneOf+oneOfSuffix)
 	}
 	return s.String()
+}
+
+func makeSpec(m message) string {
+	return writeMessage(m, messageTemplate{
+		ints: typeTemplate{
+			single: `			${selector}FieldTypeFrom${suffix}(
+				/*type inference:*/ zero.${fieldName},
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ false,
+				/*OneOf:         */ "${oneOf}",
+			),
+`,
+			repeated: `			${selector}FieldTypeFrom${suffix}(
+				/*type inference:*/ ${selector}MakeEntry(zero.${fieldName}),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+			),
+`,
+			fixedRepeated: `			${selector}FieldTypeFrom${suffix}(
+				/*type inference:*/ ${selector}MakeEntry(zero.${fieldName}[:]),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ uint64(len(zero.${fieldName})),
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+			),
+`,
+		},
+		fints: typeTemplate{
+			single: `			${selector}FieldTypeFromFint(
+				/*type inference:*/ zero.${fieldName},
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ false,
+				/*OneOf:         */ "${oneOf}",
+			),
+`,
+			repeated: `			${selector}FieldTypeFromFint(
+				/*type inference:*/ ${selector}MakeEntry(zero.${fieldName}),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+			),
+`,
+			fixedRepeated: `			${selector}FieldTypeFromFint(
+				/*type inference:*/ ${selector}MakeEntry(zero.${fieldName}[:]),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ uint64(len(zero.${fieldName})),
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+			),
+`,
+		},
+		bools: typeTemplate{
+			single: `			{
+				FieldNumber: ${fieldNumber},
+				Name:        "${fieldName}",
+				OneOf:       "${oneOf}",
+				TypeBool:    true,
+			},
+`,
+			repeated: `			{
+				FieldNumber: ${fieldNumber},
+				Name:        "${fieldName}",
+				Repeated:    true,
+				OneOf:       "${oneOf}",
+				TypeBool:    true,
+			},
+`,
+			fixedRepeated: `			{
+				FieldNumber: ${fieldNumber},
+				Name:        "${fieldName}",
+				FixedLength: uint64(len(zero.${fieldName})),
+				Repeated:    true,
+				OneOf:       "${oneOf}",
+				TypeBool:    true,
+			},
+`,
+		},
+		strings: typeTemplate{
+			single: `			{
+				FieldNumber: ${fieldNumber},
+				Name:        "${fieldName}",
+				OneOf:       "${oneOf}",
+				TypeString:  true,
+			},
+`,
+			repeated: `			{
+				FieldNumber: ${fieldNumber},
+				Name:        "${fieldName}",
+				Repeated:    true,
+				OneOf:       "${oneOf}",
+				TypeString:  true,
+			},
+`,
+			fixedRepeated: `			{
+				FieldNumber: ${fieldNumber},
+				Name:        "${fieldName}",
+				FixedLength: uint64(len(zero.${fieldName})),
+				Repeated:    true,
+				OneOf:       "${oneOf}",
+				TypeString:  true,
+			},
+`,
+		},
+		bytesTemplate: `			{
+				FieldNumber: ${fieldNumber},
+				Name:        "${fieldName}",
+				OneOf:       "${oneOf}",
+				TypeBytes:   true,
+			},
+`,
+		repeatedBytesTemplate: `			{
+				FieldNumber: ${fieldNumber},
+				Name:        "${fieldName}",
+				Repeated:    true,
+				OneOf:       "${oneOf}",
+				TypeBytes:   true,
+			},
+`,
+		fixedBytesTemplate: `			{
+				FieldNumber:    ${fieldNumber},
+				Name:           "${fieldName}",
+				OneOf:          "${oneOf}",
+				TypeFixedBytes: uint64(len(zero.${fieldName})),
+			},
+`,
+		repeatedFixedBytesTemplate: `			{
+				FieldNumber:    ${fieldNumber},
+				Name:           "${fieldName}",
+				Repeated:       true,
+				OneOf:          "${oneOf}",
+				TypeFixedBytes: uint64(len(zero.${fieldName}[0])),
+			},
+`,
+		fixedRepeatedBytesTemplate: `			{
+				FieldNumber: ${fieldNumber},
+				Name:        "${fieldName}",
+				FixedLength: uint64(len(zero.${fieldName})),
+				Repeated:    true,
+				OneOf:       "${oneOf}",
+				TypeBytes:   true,
+			},
+`,
+		fixedRepeatedFixedBytesTemplate: `			{
+				FieldNumber:    ${fieldNumber},
+				Name:           "${fieldName}",
+				FixedLength:    uint64(len(zero.${fieldName})),
+				Repeated:       true,
+				OneOf:          "${oneOf}",
+				TypeFixedBytes: uint64(len(zero.${fieldName}[0])),
+			},
+`,
+		values: typeTemplate{
+			single: `			${selector}FieldTypeFromField(
+				/*type inference:*/ ${genericTypeCast}(&zero.${fieldName}),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ false,
+				/*OneOf:         */ "${oneOf}",
+				/*types:         */ types,
+			),
+`,
+			repeated: `			${selector}FieldTypeFromField(
+				/*type inference:*/ ${genericTypeCast}(${selector}MakeEntryPointer(zero.${fieldName})),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+				/*types:         */ types,
+			),
+`,
+			fixedRepeated: `			${selector}FieldTypeFromField(
+				/*type inference:*/ ${genericTypeCast}(${selector}MakeEntryPointer(zero.${fieldName}[:])),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ uint64(len(zero.${fieldName})),
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+				/*types:         */ types,
+			),
+`,
+		},
+		pointers: typeTemplate{
+			single: `			${selector}FieldTypeFromField(
+				/*type inference:*/ ${genericTypeCast}(zero.${fieldName}),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ false,
+				/*OneOf:         */ "${oneOf}",
+				/*types:         */ types,
+			),
+`,
+			repeated: `			${selector}FieldTypeFromField(
+				/*type inference:*/ ${genericTypeCast}(${selector}MakeEntry(zero.${fieldName})),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+				/*types:         */ types,
+			),
+`,
+			fixedRepeated: `			${selector}FieldTypeFromField(
+				/*type inference:*/ ${genericTypeCast}(${selector}MakeEntry(zero.${fieldName}[:])),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ uint64(len(zero.${fieldName})),
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+				/*types:         */ types,
+			),
+`,
+		},
+		fields: typeTemplate{
+			single: `			${selector}FieldTypeFromField(
+				/*type inference:*/ zero.${fieldName},
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ false,
+				/*OneOf:         */ "${oneOf}",
+				/*types:         */ types,
+			),
+`,
+			repeated: `			${selector}FieldTypeFromField(
+				/*type inference:*/ ${selector}MakeEntry(zero.${fieldName}),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ 0,
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+				/*types:         */ types,
+			),
+`,
+
+			fixedRepeated: `			${selector}FieldTypeFromField(
+				/*type inference:*/ ${selector}MakeEntry(zero.${fieldName}[:]),
+				/*FieldNumber:   */ ${fieldNumber},
+				/*Name:          */ "${fieldName}",
+				/*FixedLength:   */ uint64(len(zero.${fieldName})),
+				/*Repeated:      */ true,
+				/*OneOf:         */ "${oneOf}",
+				/*types:         */ types,
+			),
+`,
+		},
+	})
 }
 
 func makeUnmarshal(m message) string {

@@ -56,6 +56,18 @@ type Node struct {
 	canotoData canotoData_Node
 }
 
+type RecursiveA struct {
+	Next *RecursiveB `canoto:"pointer,1"`
+
+	canotoData canotoData_RecursiveA
+}
+
+type RecursiveB struct {
+	Next *RecursiveA `canoto:"pointer,1"`
+
+	canotoData canotoData_RecursiveB
+}
+
 type GenericField[V any, _ canoto.FieldPointer[V], T canoto.FieldMaker[T]] struct {
 	Value                V     `canoto:"value,1"`
 	RepeatedValue        []V   `canoto:"repeated value,2"`
