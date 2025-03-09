@@ -49,6 +49,13 @@ type OneOf struct {
 	canotoData canotoData_OneOf
 }
 
+type Node struct {
+	Value int32 `canoto:"int,1"`
+	Next  *Node `canoto:"pointer,2,OneOf"`
+
+	canotoData canotoData_Node
+}
+
 type GenericField[V any, _ canoto.FieldPointer[V], T canoto.FieldMaker[T]] struct {
 	Value                V     `canoto:"value,1"`
 	RepeatedValue        []V   `canoto:"repeated value,2"`

@@ -24,6 +24,13 @@ message OneOf {
   int64 D = 6;
 }
 
+message Node {
+  oneof OneOf {
+    Node Next = 2;
+  }
+  int32 Value = 1;
+}
+
 message GenericField {
   bytes Value = 1;
   repeated bytes RepeatedValue = 2;
