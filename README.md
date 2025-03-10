@@ -20,20 +20,18 @@ Canoto messages are defined as normal golang structs:
 type ExampleStruct0 struct {
 	Int32              int32           `canoto:"int,1"`
 	Int64              int64           `canoto:"int,2"`
-	Uint32             uint32          `canoto:"int,3"`
-	Uint64             uint64          `canoto:"int,4"`
-	Sint32             int32           `canoto:"sint,5"`
-	Sint64             int64           `canoto:"sint,6"`
-	Fixed32            uint32          `canoto:"fint32,7"`
+	Uint32             uint32          `canoto:"uint,3"`
+	Uint64             uint64          `canoto:"uint,4"`
+	Sfixed32           int32           `canoto:"fint32,5"`
+	Fixed32            uint32          `canoto:"fint32,6"`
+	Sfixed64           int64           `canoto:"fint64,7"`
 	Fixed64            uint64          `canoto:"fint64,8"`
-	Sfixed32           int32           `canoto:"fint32,9"`
-	Sfixed64           int64           `canoto:"fint64,10"`
-	Bool               bool            `canoto:"bool,11"`
-	String             string          `canoto:"string,12"`
-	Bytes              []byte          `canoto:"bytes,13"`
-	OtherStruct        ExampleStruct1  `canoto:"value,14"`
-	OtherStructPointer *ExampleStruct1 `canoto:"pointer,15"`
-	OtherStructField   *ExampleStruct1 `canoto:"field,16"`
+	Bool               bool            `canoto:"bool,9"`
+	String             string          `canoto:"string,10"`
+	Bytes              []byte          `canoto:"bytes,11"`
+	OtherStruct        ExampleStruct1  `canoto:"value,12"`
+	OtherStructPointer *ExampleStruct1 `canoto:"pointer,13"`
+	OtherStructField   *ExampleStruct1 `canoto:"field,14"`
 
 	canotoData canotoData_ExampleStruct0
 }
@@ -65,6 +63,10 @@ type Message interface {
 
 // Field defines a type that can be included inside of a Canoto message.
 type Field interface {
+	// CanotoSpec returns the specification of this canoto message.
+	//
+	// If there is not a valid specification of this type, it returns nil.
+	CanotoSpec(types ...reflect.Type) *Spec
 	// MarshalCanotoInto writes the field into a canoto.Writer and returns the
 	// resulting canoto.Writer.
 	//
@@ -164,7 +166,7 @@ If `canoto.FieldPointer` is aliased to a different type or is otherwise re-imple
 Because using multiple types to constrain a single type is clunky, there is support for `canoto.FieldMaker`s. `canoto.FieldMaker`s can be used to allocate new messages during parsing. In order for `canoto.FieldMaker`s to work safely, the implementing type must have a useful zero value.
 
 > [!WARNING]
-> `MakeCanoto`, `CalculateCanotoCache`, `CachedCanotoSize`, `ValidCanoto` and `MarshalCanotoInto` _must_ be able to be called with the zero value of the type implementing `canoto.FieldMaker` to avoid runtime panics. It is _never_ safe to pass an interface as the `canoto.FieldMaker` type.
+> `CanotoSpec`, `MakeCanoto`, `CalculateCanotoCache`, `CachedCanotoSize`, `ValidCanoto` and `MarshalCanotoInto` _must_ be able to be called with the zero value of the type implementing `canoto.FieldMaker` to avoid runtime panics. It is _never_ safe to pass an interface as the `canoto.FieldMaker` type.
 
 An example of correctly using `canoto.FieldMaker`:
 ```golang
@@ -234,22 +236,18 @@ Will generate the canoto library in `./internal/canoto` and will import `"github
 
 | go type           | canoto type                  | proto type          | wire type |
 |-------------------|------------------------------|---------------------|-----------|
-| `int8`            | `int`                        | `int32`             | `varint`  |
-| `int16`           | `int`                        | `int32`             | `varint`  |
-| `int32`           | `int`                        | `int32`             | `varint`  |
-| `int64`           | `int`                        | `int64`             | `varint`  |
-| `uint8`           | `int`                        | `uint32`            | `varint`  |
-| `uint16`          | `int`                        | `uint32`            | `varint`  |
-| `uint32`          | `int`                        | `uint32`            | `varint`  |
-| `uint64`          | `int`                        | `uint64`            | `varint`  |
-| `int8`            | `sint`                       | `sint32`            | `varint`  |
-| `int16`           | `sint`                       | `sint32`            | `varint`  |
-| `int32`           | `sint`                       | `sint32`            | `varint`  |
-| `int64`           | `sint`                       | `sint64`            | `varint`  |
-| `uint32`          | `fint32`                     | `fixed32`           | `i32`     |
-| `uint64`          | `fint64`                     | `fixed64`           | `i64`     |
+| `int8`            | `int`                        | `sint32`            | `varint`  |
+| `int16`           | `int`                        | `sint32`            | `varint`  |
+| `int32`           | `int`                        | `sint32`            | `varint`  |
+| `int64`           | `int`                        | `sint64`            | `varint`  |
+| `uint8`           | `uint`                       | `uint32`            | `varint`  |
+| `uint16`          | `uint`                       | `uint32`            | `varint`  |
+| `uint32`          | `uint`                       | `uint32`            | `varint`  |
+| `uint64`          | `uint`                       | `uint64`            | `varint`  |
 | `int32`           | `fint32`                     | `sfixed32`          | `i32`     |
+| `uint32`          | `fint32`                     | `fixed32`           | `i32`     |
 | `int64`           | `fint64`                     | `sfixed64`          | `i64`     |
+| `uint64`          | `fint64`                     | `fixed64`           | `i64`     |
 | `bool`            | `bool`                       | `bool`              | `varint`  |
 | `string`          | `string`                     | `string`            | `len`     |
 | `[]byte`          | `bytes`                      | `bytes`             | `len`     |
@@ -257,22 +255,18 @@ Will generate the canoto library in `./internal/canoto` and will import `"github
 | `T Message`       | `value`                      | `message`           | `len`     |
 | `*T Message`      | `pointer`                    | `message`           | `len`     |
 | `T FieldMaker`    | `field`                      | `message`           | `len`     |
-| `[]int8`          | `repeated int`               | `repeated int32`    | `len`     |
-| `[]int16`         | `repeated int`               | `repeated int32`    | `len`     |
-| `[]int32`         | `repeated int`               | `repeated int32`    | `len`     |
-| `[]int64`         | `repeated int`               | `repeated int64`    | `len`     |
-| `[]uint8`         | `repeated int`               | `repeated uint32`   | `len`     |
-| `[]uint16`        | `repeated int`               | `repeated uint32`   | `len`     |
-| `[]uint32`        | `repeated int`               | `repeated uint32`   | `len`     |
-| `[]uint64`        | `repeated int`               | `repeated uint64`   | `len`     |
-| `[]int8`          | `repeated sint`              | `repeated sint32`   | `len`     |
-| `[]int16`         | `repeated sint`              | `repeated sint32`   | `len`     |
-| `[]int32`         | `repeated sint`              | `repeated sint32`   | `len`     |
-| `[]int64`         | `repeated sint`              | `repeated sint64`   | `len`     |
-| `[]uint32`        | `repeated fint32`            | `repeated fixed32`  | `len`     |
-| `[]uint64`        | `repeated fint64`            | `repeated fixed64`  | `len`     |
+| `[]int8`          | `repeated int`               | `repeated sint32`   | `len`     |
+| `[]int16`         | `repeated int`               | `repeated sint32`   | `len`     |
+| `[]int32`         | `repeated int`               | `repeated sint32`   | `len`     |
+| `[]int64`         | `repeated int`               | `repeated sint64`   | `len`     |
+| `[]uint8`         | `repeated uint`              | `repeated uint32`   | `len`     |
+| `[]uint16`        | `repeated uint`              | `repeated uint32`   | `len`     |
+| `[]uint32`        | `repeated uint`              | `repeated uint32`   | `len`     |
+| `[]uint64`        | `repeated uint`              | `repeated uint64`   | `len`     |
 | `[]int32`         | `repeated fint32`            | `repeated sfixed32` | `len`     |
+| `[]uint32`        | `repeated fint32`            | `repeated fixed32`  | `len`     |
 | `[]int64`         | `repeated fint64`            | `repeated sfixed64` | `len`     |
+| `[]uint64`        | `repeated fint64`            | `repeated fixed64`  | `len`     |
 | `[]bool`          | `repeated bool`              | `repeated bool`     | `len`     |
 | `[]string`        | `repeated string`            | `repeated string`   | `len`     |
 | `[][]byte`        | `repeated bytes`             | `repeated bytes`    | `len`     |
@@ -280,22 +274,18 @@ Will generate the canoto library in `./internal/canoto` and will import `"github
 | `[]T Message`     | `repeated value`             | `repeated message`  | `len`     |
 | `[]*T Message`    | `repeated pointer`           | `repeated message`  | `len`     |
 | `[]T FieldMaker`  | `repeated field`             | `repeated message`  | `len`     |
-| `[x]int8`         | `fixed repeated int`         | `repeated int32`    | `len`     |
-| `[x]int16`        | `fixed repeated int`         | `repeated int32`    | `len`     |
-| `[x]int32`        | `fixed repeated int`         | `repeated int32`    | `len`     |
-| `[x]int64`        | `fixed repeated int`         | `repeated int64`    | `len`     |
-| `[x]uint8`        | `fixed repeated int`         | `repeated uint32`   | `len`     |
-| `[x]uint16`       | `fixed repeated int`         | `repeated uint32`   | `len`     |
-| `[x]uint32`       | `fixed repeated int`         | `repeated uint32`   | `len`     |
-| `[x]uint64`       | `fixed repeated int`         | `repeated uint64`   | `len`     |
-| `[x]int8`         | `fixed repeated sint`        | `repeated sint32`   | `len`     |
-| `[x]int16`        | `fixed repeated sint`        | `repeated sint32`   | `len`     |
-| `[x]int32`        | `fixed repeated sint`        | `repeated sint32`   | `len`     |
-| `[x]int64`        | `fixed repeated sint`        | `repeated sint64`   | `len`     |
-| `[x]uint32`       | `fixed repeated fint32`      | `repeated fixed32`  | `len`     |
-| `[x]uint64`       | `fixed repeated fint64`      | `repeated fixed64`  | `len`     |
+| `[x]int8`         | `fixed repeated int`         | `repeated sint32`   | `len`     |
+| `[x]int16`        | `fixed repeated int`         | `repeated sint32`   | `len`     |
+| `[x]int32`        | `fixed repeated int`         | `repeated sint32`   | `len`     |
+| `[x]int64`        | `fixed repeated int`         | `repeated sint64`   | `len`     |
+| `[x]uint8`        | `fixed repeated uint`        | `repeated uint32`   | `len`     |
+| `[x]uint16`       | `fixed repeated uint`        | `repeated uint32`   | `len`     |
+| `[x]uint32`       | `fixed repeated uint`        | `repeated uint32`   | `len`     |
+| `[x]uint64`       | `fixed repeated uint`        | `repeated uint64`   | `len`     |
 | `[x]int32`        | `fixed repeated fint32`      | `repeated sfixed32` | `len`     |
+| `[x]uint32`       | `fixed repeated fint32`      | `repeated fixed32`  | `len`     |
 | `[x]int64`        | `fixed repeated fint64`      | `repeated sfixed64` | `len`     |
+| `[x]uint64`       | `fixed repeated fint64`      | `repeated fixed64`  | `len`     |
 | `[x]bool`         | `fixed repeated bool`        | `repeated bool`     | `len`     |
 | `[x]string`       | `fixed repeated string`      | `repeated string`   | `len`     |
 | `[x][]byte`       | `fixed repeated bytes`       | `repeated bytes`    | `len`     |

@@ -7,6 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 	"github.com/thepudds/fzgen/fuzzer"
+	"golang.org/x/exp/constraints"
 	"google.golang.org/protobuf/proto"
 	"google.golang.org/protobuf/reflect/protoreflect"
 
@@ -21,7 +22,7 @@ func canonicalizeSlice[T any](s []T) []T {
 	return s
 }
 
-func castSlice[I, O canoto.Int](s []I) []O {
+func castSlice[I, O constraints.Integer](s []I) []O {
 	if len(s) == 0 {
 		return nil
 	}
@@ -53,10 +54,6 @@ func canonicalizeCanotoScalars(s *Scalars) *Scalars {
 	s.RepeatedUint16 = canonicalizeSlice(s.RepeatedUint16)
 	s.RepeatedUint32 = canonicalizeSlice(s.RepeatedUint32)
 	s.RepeatedUint64 = canonicalizeSlice(s.RepeatedUint64)
-	s.RepeatedSint8 = canonicalizeSlice(s.RepeatedSint8)
-	s.RepeatedSint16 = canonicalizeSlice(s.RepeatedSint16)
-	s.RepeatedSint32 = canonicalizeSlice(s.RepeatedSint32)
-	s.RepeatedSint64 = canonicalizeSlice(s.RepeatedSint64)
 	s.RepeatedFixed32 = canonicalizeSlice(s.RepeatedFixed32)
 	s.RepeatedFixed64 = canonicalizeSlice(s.RepeatedFixed64)
 	s.RepeatedSfixed32 = canonicalizeSlice(s.RepeatedSfixed32)
@@ -78,31 +75,31 @@ func canonicalizeCanotoScalars(s *Scalars) *Scalars {
 	for i := range s.CustomFixedRepeatedBytes {
 		s.CustomFixedRepeatedBytes[i] = canonicalizeSlice(s.CustomFixedRepeatedBytes[i])
 	}
-	if s.Pointer != nil && s.Pointer.Int32 == 0 {
+	if s.Pointer != nil && s.Pointer.Uint == 0 {
 		s.Pointer = nil
 	}
 	s.RepeatedPointer = canonicalizeSlice(s.RepeatedPointer)
 	for i := range s.RepeatedPointer {
-		if s.RepeatedPointer[i] != nil && s.RepeatedPointer[i].Int32 == 0 {
+		if s.RepeatedPointer[i] != nil && s.RepeatedPointer[i].Uint == 0 {
 			s.RepeatedPointer[i] = nil
 		}
 	}
 	for i := range s.FixedRepeatedPointer {
-		if s.FixedRepeatedPointer[i] != nil && s.FixedRepeatedPointer[i].Int32 == 0 {
+		if s.FixedRepeatedPointer[i] != nil && s.FixedRepeatedPointer[i].Uint == 0 {
 			s.FixedRepeatedPointer[i] = nil
 		}
 	}
-	if s.Field != nil && s.Field.Int32 == 0 {
+	if s.Field != nil && s.Field.Uint == 0 {
 		s.Field = nil
 	}
 	s.RepeatedField = canonicalizeSlice(s.RepeatedField)
 	for i := range s.RepeatedField {
-		if s.RepeatedField[i] != nil && s.RepeatedField[i].Int32 == 0 {
+		if s.RepeatedField[i] != nil && s.RepeatedField[i].Uint == 0 {
 			s.RepeatedField[i] = nil
 		}
 	}
 	for i := range s.FixedRepeatedField {
-		if s.FixedRepeatedField[i] != nil && s.FixedRepeatedField[i].Int32 == 0 {
+		if s.FixedRepeatedField[i] != nil && s.FixedRepeatedField[i].Uint == 0 {
 			s.FixedRepeatedField[i] = nil
 		}
 	}
@@ -113,7 +110,7 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 	var largestFieldNumber *pb.LargestFieldNumber
 	if s.LargestFieldNumber != nil {
 		largestFieldNumber = &pb.LargestFieldNumber{
-			Int32: s.LargestFieldNumber.Int32,
+			Uint: s.LargestFieldNumber.Uint,
 		}
 	}
 	repeatedLargestFieldNumbers := make([]*pb.LargestFieldNumber, len(s.RepeatedLargestFieldNumber))
@@ -121,7 +118,7 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 		var largestFieldNumber *pb.LargestFieldNumber
 		if v != nil {
 			largestFieldNumber = &pb.LargestFieldNumber{
-				Int32: v.Int32,
+				Uint: v.Uint,
 			}
 		}
 		repeatedLargestFieldNumbers[i] = largestFieldNumber
@@ -131,7 +128,7 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 		var largestFieldNumber *pb.LargestFieldNumber
 		if v != nil {
 			largestFieldNumber = &pb.LargestFieldNumber{
-				Int32: v.Int32,
+				Uint: v.Uint,
 			}
 		}
 		fixedRepeatedLargestFieldNumber[i] = largestFieldNumber
@@ -172,17 +169,17 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 	}
 
 	var pointer *pb.LargestFieldNumber
-	if v := s.Pointer.GetInt32(); v != 0 {
+	if v := s.Pointer.GetUint(); v != 0 {
 		pointer = &pb.LargestFieldNumber{
-			Int32: v,
+			Uint: v,
 		}
 	}
 	repeatedPointers := make([]*pb.LargestFieldNumber, 0, len(s.RepeatedPointer))
 	for _, v := range s.RepeatedPointer {
 		var ptr *pb.LargestFieldNumber
-		if v := v.GetInt32(); v != 0 {
+		if v := v.GetUint(); v != 0 {
 			ptr = &pb.LargestFieldNumber{
-				Int32: v,
+				Uint: v,
 			}
 		}
 		repeatedPointers = append(repeatedPointers, ptr)
@@ -190,25 +187,25 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 	fixedRepeatedPointers := make([]*pb.LargestFieldNumber, 0, len(s.FixedRepeatedPointer))
 	for _, v := range s.FixedRepeatedPointer {
 		var ptr *pb.LargestFieldNumber
-		if v := v.GetInt32(); v != 0 {
+		if v := v.GetUint(); v != 0 {
 			ptr = &pb.LargestFieldNumber{
-				Int32: v,
+				Uint: v,
 			}
 		}
 		fixedRepeatedPointers = append(fixedRepeatedPointers, ptr)
 	}
 	var field *pb.LargestFieldNumber
-	if v := s.Field.GetInt32(); v != 0 {
+	if v := s.Field.GetUint(); v != 0 {
 		field = &pb.LargestFieldNumber{
-			Int32: v,
+			Uint: v,
 		}
 	}
 	repeatedFields := make([]*pb.LargestFieldNumber, 0, len(s.RepeatedField))
 	for _, v := range s.RepeatedField {
 		var field *pb.LargestFieldNumber
-		if v := v.GetInt32(); v != 0 {
+		if v := v.GetUint(); v != 0 {
 			field = &pb.LargestFieldNumber{
-				Int32: v,
+				Uint: v,
 			}
 		}
 		repeatedFields = append(repeatedFields, field)
@@ -216,9 +213,9 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 	fixedRepeatedFields := make([]*pb.LargestFieldNumber, 0, len(s.FixedRepeatedField))
 	for _, v := range s.FixedRepeatedField {
 		var field *pb.LargestFieldNumber
-		if v := v.GetInt32(); v != 0 {
+		if v := v.GetUint(); v != 0 {
 			field = &pb.LargestFieldNumber{
-				Int32: v,
+				Uint: v,
 			}
 		}
 		fixedRepeatedFields = append(fixedRepeatedFields, field)
@@ -232,10 +229,6 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 		Uint16:             s.Uint16,
 		Uint32:             s.Uint32,
 		Uint64:             s.Uint64,
-		Sint8:              s.Sint8,
-		Sint16:             s.Sint16,
-		Sint32:             s.Sint32,
-		Sint64:             s.Sint64,
 		Fixed32:            s.Fixed32,
 		Fixed64:            s.Fixed64,
 		Sfixed32:           s.Sfixed32,
@@ -253,10 +246,6 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 		RepeatedUint16:             s.RepeatedUint16,
 		RepeatedUint32:             s.RepeatedUint32,
 		RepeatedUint64:             s.RepeatedUint64,
-		RepeatedSint8:              s.RepeatedSint8,
-		RepeatedSint16:             s.RepeatedSint16,
-		RepeatedSint32:             s.RepeatedSint32,
-		RepeatedSint64:             s.RepeatedSint64,
 		RepeatedFixed32:            s.RepeatedFixed32,
 		RepeatedFixed64:            s.RepeatedFixed64,
 		RepeatedSfixed32:           s.RepeatedSfixed32,
@@ -274,10 +263,6 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 		FixedRepeatedUint16:             s.FixedRepeatedUint16,
 		FixedRepeatedUint32:             s.FixedRepeatedUint32,
 		FixedRepeatedUint64:             s.FixedRepeatedUint64,
-		FixedRepeatedSint8:              s.FixedRepeatedSint8,
-		FixedRepeatedSint16:             s.FixedRepeatedSint16,
-		FixedRepeatedSint32:             s.FixedRepeatedSint32,
-		FixedRepeatedSint64:             s.FixedRepeatedSint64,
 		FixedRepeatedFixed32:            s.FixedRepeatedFixed32,
 		FixedRepeatedFixed64:            s.FixedRepeatedFixed64,
 		FixedRepeatedSfixed32:           s.FixedRepeatedSfixed32,
@@ -313,9 +298,9 @@ func canonicalizeProtoScalars(s *pb.Scalars) *pb.Scalars {
 
 func canotoScalarsToProto(s *Scalars) *pb.Scalars {
 	var largestFieldNumber *pb.LargestFieldNumber
-	if s.LargestFieldNumber.Int32 != 0 {
+	if s.LargestFieldNumber.Uint != 0 {
 		largestFieldNumber = &pb.LargestFieldNumber{
-			Int32: uint64(s.LargestFieldNumber.Int32),
+			Uint: uint64(s.LargestFieldNumber.Uint),
 		}
 	}
 	repeatedLargestFieldNumbers := make([]*pb.LargestFieldNumber, len(s.RepeatedLargestFieldNumber))
@@ -323,7 +308,7 @@ func canotoScalarsToProto(s *Scalars) *pb.Scalars {
 		v := &s.RepeatedLargestFieldNumber[i]
 
 		repeatedLargestFieldNumbers[i] = &pb.LargestFieldNumber{
-			Int32: uint64(v.Int32),
+			Uint: uint64(v.Uint),
 		}
 	}
 	var (
@@ -334,9 +319,9 @@ func canotoScalarsToProto(s *Scalars) *pb.Scalars {
 		v := &s.FixedRepeatedLargestFieldNumber[i]
 
 		fixedLargestFieldNumbers[i] = &pb.LargestFieldNumber{
-			Int32: uint64(v.Int32),
+			Uint: uint64(v.Uint),
 		}
-		isZero = isZero && v.Int32 == 0
+		isZero = isZero && v.Uint == 0
 	}
 	if isZero {
 		fixedLargestFieldNumbers = nil
@@ -382,14 +367,10 @@ func canotoScalarsToProto(s *Scalars) *pb.Scalars {
 		Uint16:             uint32(s.Uint16),
 		Uint32:             s.Uint32,
 		Uint64:             s.Uint64,
-		Sint8:              int32(s.Sint8),
-		Sint16:             int32(s.Sint16),
-		Sint32:             s.Sint32,
-		Sint64:             s.Sint64,
-		Fixed32:            s.Fixed32,
-		Fixed64:            s.Fixed64,
 		Sfixed32:           s.Sfixed32,
+		Fixed32:            s.Fixed32,
 		Sfixed64:           s.Sfixed64,
+		Fixed64:            s.Fixed64,
 		Bool:               s.Bool,
 		String_:            s.String,
 		Bytes:              s.Bytes,
@@ -403,10 +384,6 @@ func canotoScalarsToProto(s *Scalars) *pb.Scalars {
 		RepeatedUint16:             castSlice[uint16, uint32](s.RepeatedUint16),
 		RepeatedUint32:             s.RepeatedUint32,
 		RepeatedUint64:             s.RepeatedUint64,
-		RepeatedSint8:              castSlice[int8, int32](s.RepeatedSint8),
-		RepeatedSint16:             castSlice[int16, int32](s.RepeatedSint16),
-		RepeatedSint32:             s.RepeatedSint32,
-		RepeatedSint64:             s.RepeatedSint64,
 		RepeatedFixed32:            s.RepeatedFixed32,
 		RepeatedFixed64:            s.RepeatedFixed64,
 		RepeatedSfixed32:           s.RepeatedSfixed32,
@@ -450,18 +427,6 @@ func canotoScalarsToProto(s *Scalars) *pb.Scalars {
 	}
 	if !canoto.IsZero(s.FixedRepeatedUint64) {
 		pbs.FixedRepeatedUint64 = slices.Clone(s.FixedRepeatedUint64[:])
-	}
-	if !canoto.IsZero(s.FixedRepeatedSint8) {
-		pbs.FixedRepeatedSint8 = castSlice[int8, int32](s.FixedRepeatedSint8[:])
-	}
-	if !canoto.IsZero(s.FixedRepeatedSint16) {
-		pbs.FixedRepeatedSint16 = castSlice[int16, int32](s.FixedRepeatedSint16[:])
-	}
-	if !canoto.IsZero(s.FixedRepeatedSint32) {
-		pbs.FixedRepeatedSint32 = slices.Clone(s.FixedRepeatedSint32[:])
-	}
-	if !canoto.IsZero(s.FixedRepeatedSint64) {
-		pbs.FixedRepeatedSint64 = slices.Clone(s.FixedRepeatedSint64[:])
 	}
 	if !canoto.IsZero(s.FixedRepeatedFixed32) {
 		pbs.FixedRepeatedFixed32 = slices.Clone(s.FixedRepeatedFixed32[:])
@@ -522,17 +487,17 @@ func canotoScalarsToProto(s *Scalars) *pb.Scalars {
 			pbs.CustomFixedRepeatedFixedBytes = append(pbs.CustomFixedRepeatedFixedBytes, slices.Clone(v[:]))
 		}
 	}
-	if s.Pointer != nil && s.Pointer.Int32 != 0 {
+	if s.Pointer != nil && s.Pointer.Uint != 0 {
 		pbs.Pointer = &pb.LargestFieldNumber{
-			Int32: uint64(s.Pointer.Int32),
+			Uint: uint64(s.Pointer.Uint),
 		}
 	}
 	if len(s.RepeatedPointer) != 0 {
 		for _, v := range s.RepeatedPointer {
 			var ptr *pb.LargestFieldNumber
-			if v != nil && v.Int32 != 0 {
+			if v != nil && v.Uint != 0 {
 				ptr = &pb.LargestFieldNumber{
-					Int32: uint64(v.Int32),
+					Uint: uint64(v.Uint),
 				}
 			}
 			pbs.RepeatedPointer = append(pbs.RepeatedPointer, ptr)
@@ -541,31 +506,31 @@ func canotoScalarsToProto(s *Scalars) *pb.Scalars {
 	{
 		isZero := true
 		for _, v := range s.FixedRepeatedPointer {
-			isZero = isZero && (v == nil || v.Int32 == 0)
+			isZero = isZero && (v == nil || v.Uint == 0)
 		}
 		if !isZero {
 			for _, v := range s.FixedRepeatedPointer {
 				var ptr *pb.LargestFieldNumber
-				if v != nil && v.Int32 != 0 {
+				if v != nil && v.Uint != 0 {
 					ptr = &pb.LargestFieldNumber{
-						Int32: uint64(v.Int32),
+						Uint: uint64(v.Uint),
 					}
 				}
 				pbs.FixedRepeatedPointer = append(pbs.FixedRepeatedPointer, ptr)
 			}
 		}
 	}
-	if s.Field != nil && s.Field.Int32 != 0 {
+	if s.Field != nil && s.Field.Uint != 0 {
 		pbs.Field = &pb.LargestFieldNumber{
-			Int32: uint64(s.Field.Int32),
+			Uint: uint64(s.Field.Uint),
 		}
 	}
 	if len(s.RepeatedField) != 0 {
 		for _, v := range s.RepeatedField {
 			var ptr *pb.LargestFieldNumber
-			if v != nil && v.Int32 != 0 {
+			if v != nil && v.Uint != 0 {
 				ptr = &pb.LargestFieldNumber{
-					Int32: uint64(v.Int32),
+					Uint: uint64(v.Uint),
 				}
 			}
 			pbs.RepeatedField = append(pbs.RepeatedField, ptr)
@@ -574,14 +539,14 @@ func canotoScalarsToProto(s *Scalars) *pb.Scalars {
 	{
 		isZero := true
 		for _, v := range s.FixedRepeatedField {
-			isZero = isZero && (v == nil || v.Int32 == 0)
+			isZero = isZero && (v == nil || v.Uint == 0)
 		}
 		if !isZero {
 			for _, v := range s.FixedRepeatedField {
 				var ptr *pb.LargestFieldNumber
-				if v != nil && v.Int32 != 0 {
+				if v != nil && v.Uint != 0 {
 					ptr = &pb.LargestFieldNumber{
-						Int32: uint64(v.Int32),
+						Uint: uint64(v.Uint),
 					}
 				}
 				pbs.FixedRepeatedField = append(pbs.FixedRepeatedField, ptr)
@@ -695,18 +660,14 @@ func FuzzScalars_UnmarshalEquals(f *testing.F) {
 
 func TestScalars_Concurrent_MarshalCanoto(t *testing.T) {
 	s := Scalars{
-		Int8:     31,
-		Int16:    2164,
-		Int32:    216457,
-		Int64:    -2138746,
+		Int8:     -31,
+		Int16:    -2164,
+		Int32:    -12786345,
+		Int64:    98761243,
 		Uint8:    254,
 		Uint16:   21645,
 		Uint32:   32485976,
 		Uint64:   287634,
-		Sint8:    -31,
-		Sint16:   -2164,
-		Sint32:   -12786345,
-		Sint64:   98761243,
 		Fixed32:  98765234,
 		Fixed64:  1234576,
 		Sfixed32: -21348976,
@@ -714,8 +675,8 @@ func TestScalars_Concurrent_MarshalCanoto(t *testing.T) {
 		Bool:     true,
 		String:   "hi my name is Bob",
 		Bytes:    []byte("hi my name is Bob too"),
-		LargestFieldNumber: LargestFieldNumber[int32]{
-			Int32: 216457,
+		LargestFieldNumber: LargestFieldNumber[uint32]{
+			Uint: 216457,
 		},
 
 		RepeatedInt8:     []int8{1, 2, 3},
@@ -726,10 +687,6 @@ func TestScalars_Concurrent_MarshalCanoto(t *testing.T) {
 		RepeatedUint16:   []uint16{1, 2, 3},
 		RepeatedUint32:   []uint32{1, 2, 3},
 		RepeatedUint64:   []uint64{1, 2, 3},
-		RepeatedSint8:    []int8{1, 2, 3},
-		RepeatedSint16:   []int16{1, 2, 3},
-		RepeatedSint32:   []int32{1, 2, 3},
-		RepeatedSint64:   []int64{1, 2, 3},
 		RepeatedFixed32:  []uint32{1, 2, 3},
 		RepeatedFixed64:  []uint64{1, 2, 3},
 		RepeatedSfixed32: []int32{1, 2, 3},
@@ -737,9 +694,9 @@ func TestScalars_Concurrent_MarshalCanoto(t *testing.T) {
 		RepeatedBool:     []bool{true, false, true},
 		RepeatedString:   []string{"hi", "my", "name", "is", "Bob"},
 		RepeatedBytes:    [][]byte{{1, 2, 3}, {4, 5, 6}},
-		RepeatedLargestFieldNumber: []LargestFieldNumber[int32]{
-			{Int32: 123455},
-			{Int32: 876523},
+		RepeatedLargestFieldNumber: []LargestFieldNumber[uint32]{
+			{Uint: 123455},
+			{Uint: 876523},
 		},
 
 		FixedRepeatedInt8:       [3]int8{1, 2, 3},
@@ -750,10 +707,6 @@ func TestScalars_Concurrent_MarshalCanoto(t *testing.T) {
 		FixedRepeatedUint16:     [3]uint16{1, 2, 3},
 		FixedRepeatedUint32:     [3]uint32{1, 2, 3},
 		FixedRepeatedUint64:     [3]uint64{1, 2, 3},
-		FixedRepeatedSint8:      [3]int8{1, 2, 3},
-		FixedRepeatedSint16:     [3]int16{1, 2, 3},
-		FixedRepeatedSint32:     [3]int32{1, 2, 3},
-		FixedRepeatedSint64:     [3]int64{1, 2, 3},
 		FixedRepeatedFixed32:    [3]uint32{1, 2, 3},
 		FixedRepeatedFixed64:    [3]uint64{1, 2, 3},
 		FixedRepeatedSfixed32:   [3]int32{1, 2, 3},
@@ -764,10 +717,10 @@ func TestScalars_Concurrent_MarshalCanoto(t *testing.T) {
 		RepeatedFixedBytes:      [][32]byte{{1}, {2}, {3}},
 		FixedRepeatedBytes:      [3][]byte{{1}, {2}, {3}},
 		FixedRepeatedFixedBytes: [3][32]byte{{1}, {2}, {3}},
-		FixedRepeatedLargestFieldNumber: [3]LargestFieldNumber[int32]{
-			{Int32: 123455},
-			{Int32: 876523},
-			{Int32: -576214},
+		FixedRepeatedLargestFieldNumber: [3]LargestFieldNumber[uint32]{
+			{Uint: 123455},
+			{Uint: 876523},
+			{Uint: 576214},
 		},
 
 		ConstRepeatedUint64: [constRepeatedUint64Len]uint64{1, 2, 3},
@@ -807,18 +760,14 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 	b.Run("marshal/full/stack", func(b *testing.B) {
 		for range b.N {
 			s := Scalars{
-				Int8:     31,
-				Int16:    2164,
-				Int32:    216457,
-				Int64:    -2138746,
+				Int8:     -31,
+				Int16:    -2164,
+				Int32:    -12786345,
+				Int64:    98761243,
 				Uint8:    254,
 				Uint16:   21645,
 				Uint32:   32485976,
 				Uint64:   287634,
-				Sint8:    -31,
-				Sint16:   -2164,
-				Sint32:   -12786345,
-				Sint64:   98761243,
 				Fixed32:  98765234,
 				Fixed64:  1234576,
 				Sfixed32: -21348976,
@@ -826,8 +775,8 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 				Bool:     true,
 				String:   "hi my name is Bob",
 				Bytes:    []byte("hi my name is Bob too"),
-				LargestFieldNumber: LargestFieldNumber[int32]{
-					Int32: 216457,
+				LargestFieldNumber: LargestFieldNumber[uint32]{
+					Uint: 216457,
 				},
 
 				RepeatedInt8:     []int8{1, 2, 3},
@@ -838,10 +787,6 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 				RepeatedUint16:   []uint16{1, 2, 3},
 				RepeatedUint32:   []uint32{1, 2, 3},
 				RepeatedUint64:   []uint64{1, 2, 3},
-				RepeatedSint8:    []int8{1, 2, 3},
-				RepeatedSint16:   []int16{1, 2, 3},
-				RepeatedSint32:   []int32{1, 2, 3},
-				RepeatedSint64:   []int64{1, 2, 3},
 				RepeatedFixed32:  []uint32{1, 2, 3},
 				RepeatedFixed64:  []uint64{1, 2, 3},
 				RepeatedSfixed32: []int32{1, 2, 3},
@@ -849,9 +794,9 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 				RepeatedBool:     []bool{true, false, true},
 				RepeatedString:   []string{"hi", "my", "name", "is", "Bob"},
 				RepeatedBytes:    [][]byte{{1, 2, 3}, {4, 5, 6}},
-				RepeatedLargestFieldNumber: []LargestFieldNumber[int32]{
-					{Int32: 123455},
-					{Int32: 876523},
+				RepeatedLargestFieldNumber: []LargestFieldNumber[uint32]{
+					{Uint: 123455},
+					{Uint: 876523},
 				},
 
 				FixedRepeatedInt8:       [3]int8{1, 2, 3},
@@ -862,10 +807,6 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 				FixedRepeatedUint16:     [3]uint16{1, 2, 3},
 				FixedRepeatedUint32:     [3]uint32{1, 2, 3},
 				FixedRepeatedUint64:     [3]uint64{1, 2, 3},
-				FixedRepeatedSint8:      [3]int8{1, 2, 3},
-				FixedRepeatedSint16:     [3]int16{1, 2, 3},
-				FixedRepeatedSint32:     [3]int32{1, 2, 3},
-				FixedRepeatedSint64:     [3]int64{1, 2, 3},
 				FixedRepeatedFixed32:    [3]uint32{1, 2, 3},
 				FixedRepeatedFixed64:    [3]uint64{1, 2, 3},
 				FixedRepeatedSfixed32:   [3]int32{1, 2, 3},
@@ -876,10 +817,10 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 				RepeatedFixedBytes:      [][32]byte{{1}, {2}, {3}},
 				FixedRepeatedBytes:      [3][]byte{{1}, {2}, {3}},
 				FixedRepeatedFixedBytes: [3][32]byte{{1}, {2}, {3}},
-				FixedRepeatedLargestFieldNumber: [3]LargestFieldNumber[int32]{
-					{Int32: 123455},
-					{Int32: 876523},
-					{Int32: -576214},
+				FixedRepeatedLargestFieldNumber: [3]LargestFieldNumber[uint32]{
+					{Uint: 123455},
+					{Uint: 876523},
+					{Uint: 576214},
 				},
 
 				ConstRepeatedUint64: [constRepeatedUint64Len]uint64{1, 2, 3},
@@ -897,18 +838,14 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 	b.Run("marshal/primitives/stack", func(b *testing.B) {
 		for range b.N {
 			s := Scalars{
-				Int8:     31,
-				Int16:    2164,
-				Int32:    216457,
-				Int64:    -2138746,
+				Int8:     -31,
+				Int16:    -2164,
+				Int32:    -12786345,
+				Int64:    98761243,
 				Uint8:    254,
 				Uint16:   21645,
 				Uint32:   32485976,
 				Uint64:   287634,
-				Sint8:    -31,
-				Sint16:   -2164,
-				Sint32:   -12786345,
-				Sint64:   98761243,
 				Fixed32:  98765234,
 				Fixed64:  1234576,
 				Sfixed32: -21348976,
@@ -916,26 +853,22 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 				Bool:     true,
 				String:   "hi my name is Bob",
 				Bytes:    []byte("hi my name is Bob too"),
-				LargestFieldNumber: LargestFieldNumber[int32]{
-					Int32: 216457,
+				LargestFieldNumber: LargestFieldNumber[uint32]{
+					Uint: 216457,
 				},
 			}
 			s.MarshalCanoto()
 		}
 	})
 	full := Scalars{
-		Int8:     31,
-		Int16:    2164,
-		Int32:    216457,
-		Int64:    -2138746,
+		Int8:     -31,
+		Int16:    -2164,
+		Int32:    -12786345,
+		Int64:    98761243,
 		Uint8:    254,
 		Uint16:   21645,
 		Uint32:   32485976,
 		Uint64:   287634,
-		Sint8:    -31,
-		Sint16:   -2164,
-		Sint32:   -12786345,
-		Sint64:   98761243,
 		Fixed32:  98765234,
 		Fixed64:  1234576,
 		Sfixed32: -21348976,
@@ -943,8 +876,8 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 		Bool:     true,
 		String:   "hi my name is Bob",
 		Bytes:    []byte("hi my name is Bob too"),
-		LargestFieldNumber: LargestFieldNumber[int32]{
-			Int32: 216457,
+		LargestFieldNumber: LargestFieldNumber[uint32]{
+			Uint: 216457,
 		},
 
 		RepeatedInt8:     []int8{1, 2, 3},
@@ -955,10 +888,6 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 		RepeatedUint16:   []uint16{1, 2, 3},
 		RepeatedUint32:   []uint32{1, 2, 3},
 		RepeatedUint64:   []uint64{1, 2, 3},
-		RepeatedSint8:    []int8{1, 2, 3},
-		RepeatedSint16:   []int16{1, 2, 3},
-		RepeatedSint32:   []int32{1, 2, 3},
-		RepeatedSint64:   []int64{1, 2, 3},
 		RepeatedFixed32:  []uint32{1, 2, 3},
 		RepeatedFixed64:  []uint64{1, 2, 3},
 		RepeatedSfixed32: []int32{1, 2, 3},
@@ -966,9 +895,9 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 		RepeatedBool:     []bool{true, false, true},
 		RepeatedString:   []string{"hi", "my", "name", "is", "Bob"},
 		RepeatedBytes:    [][]byte{{1, 2, 3}, {4, 5, 6}},
-		RepeatedLargestFieldNumber: []LargestFieldNumber[int32]{
-			{Int32: 123455},
-			{Int32: 876523},
+		RepeatedLargestFieldNumber: []LargestFieldNumber[uint32]{
+			{Uint: 123455},
+			{Uint: 876523},
 		},
 
 		FixedRepeatedInt8:       [3]int8{1, 2, 3},
@@ -979,10 +908,6 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 		FixedRepeatedUint16:     [3]uint16{1, 2, 3},
 		FixedRepeatedUint32:     [3]uint32{1, 2, 3},
 		FixedRepeatedUint64:     [3]uint64{1, 2, 3},
-		FixedRepeatedSint8:      [3]int8{1, 2, 3},
-		FixedRepeatedSint16:     [3]int16{1, 2, 3},
-		FixedRepeatedSint32:     [3]int32{1, 2, 3},
-		FixedRepeatedSint64:     [3]int64{1, 2, 3},
 		FixedRepeatedFixed32:    [3]uint32{1, 2, 3},
 		FixedRepeatedFixed64:    [3]uint64{1, 2, 3},
 		FixedRepeatedSfixed32:   [3]int32{1, 2, 3},
@@ -993,10 +918,10 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 		RepeatedFixedBytes:      [][32]byte{{1}, {2}, {3}},
 		FixedRepeatedBytes:      [3][]byte{{1}, {2}, {3}},
 		FixedRepeatedFixedBytes: [3][32]byte{{1}, {2}, {3}},
-		FixedRepeatedLargestFieldNumber: [3]LargestFieldNumber[int32]{
-			{Int32: 123455},
-			{Int32: 876523},
-			{Int32: -576214},
+		FixedRepeatedLargestFieldNumber: [3]LargestFieldNumber[uint32]{
+			{Uint: 123455},
+			{Uint: 876523},
+			{Uint: 576214},
 		},
 
 		ConstRepeatedUint64: [constRepeatedUint64Len]uint64{1, 2, 3},
@@ -1009,18 +934,14 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 		},
 	}
 	simple := Scalars{
-		Int8:     31,
-		Int16:    2164,
-		Int32:    216457,
-		Int64:    -2138746,
+		Int8:     -31,
+		Int16:    -2164,
+		Int32:    -12786345,
+		Int64:    98761243,
 		Uint8:    254,
 		Uint16:   21645,
 		Uint32:   32485976,
 		Uint64:   287634,
-		Sint8:    -31,
-		Sint16:   -2164,
-		Sint32:   -12786345,
-		Sint64:   98761243,
 		Fixed32:  98765234,
 		Fixed64:  1234576,
 		Sfixed32: -21348976,
@@ -1028,8 +949,8 @@ func BenchmarkScalars_Canoto(b *testing.B) {
 		Bool:     true,
 		String:   "hi my name is Bob",
 		Bytes:    []byte("hi my name is Bob too"),
-		LargestFieldNumber: LargestFieldNumber[int32]{
-			Int32: 216457,
+		LargestFieldNumber: LargestFieldNumber[uint32]{
+			Uint: 216457,
 		},
 	}
 	spec := (*Scalars)(nil).CanotoSpec()
@@ -1122,18 +1043,14 @@ func BenchmarkScalars_Proto(b *testing.B) {
 	b.Run("marshal/full/stack", func(b *testing.B) {
 		for range b.N {
 			s := pb.Scalars{
-				Int8:     31,
-				Int16:    2164,
-				Int32:    216457,
-				Int64:    -2138746,
+				Int8:     -31,
+				Int16:    -2164,
+				Int32:    -12786345,
+				Int64:    98761243,
 				Uint8:    254,
 				Uint16:   21645,
 				Uint32:   32485976,
 				Uint64:   287634,
-				Sint8:    -31,
-				Sint16:   -2164,
-				Sint32:   -12786345,
-				Sint64:   98761243,
 				Fixed32:  98765234,
 				Fixed64:  1234576,
 				Sfixed32: -21348976,
@@ -1142,7 +1059,7 @@ func BenchmarkScalars_Proto(b *testing.B) {
 				String_:  "hi my name is Bob",
 				Bytes:    []byte("hi my name is Bob too"),
 				LargestFieldNumber: &pb.LargestFieldNumber{
-					Int32: 216457,
+					Uint: 216457,
 				},
 
 				RepeatedInt8:     []int32{1, 2, 3},
@@ -1153,10 +1070,6 @@ func BenchmarkScalars_Proto(b *testing.B) {
 				RepeatedUint16:   []uint32{1, 2, 3},
 				RepeatedUint32:   []uint32{1, 2, 3},
 				RepeatedUint64:   []uint64{1, 2, 3},
-				RepeatedSint8:    []int32{1, 2, 3},
-				RepeatedSint16:   []int32{1, 2, 3},
-				RepeatedSint32:   []int32{1, 2, 3},
-				RepeatedSint64:   []int64{1, 2, 3},
 				RepeatedFixed32:  []uint32{1, 2, 3},
 				RepeatedFixed64:  []uint64{1, 2, 3},
 				RepeatedSfixed32: []int32{1, 2, 3},
@@ -1165,8 +1078,8 @@ func BenchmarkScalars_Proto(b *testing.B) {
 				RepeatedString:   []string{"hi", "my", "name", "is", "Bob"},
 				RepeatedBytes:    [][]byte{{1, 2, 3}, {4, 5, 6}},
 				RepeatedLargestFieldNumber: []*pb.LargestFieldNumber{
-					{Int32: 123455},
-					{Int32: 876523},
+					{Uint: 123455},
+					{Uint: 876523},
 				},
 
 				FixedRepeatedInt8:     []int32{1, 2, 3},
@@ -1177,10 +1090,6 @@ func BenchmarkScalars_Proto(b *testing.B) {
 				FixedRepeatedUint16:   []uint32{1, 2, 3},
 				FixedRepeatedUint32:   []uint32{1, 2, 3},
 				FixedRepeatedUint64:   []uint64{1, 2, 3},
-				FixedRepeatedSint8:    []int32{1, 2, 3},
-				FixedRepeatedSint16:   []int32{1, 2, 3},
-				FixedRepeatedSint32:   []int32{1, 2, 3},
-				FixedRepeatedSint64:   []int64{1, 2, 3},
 				FixedRepeatedFixed32:  []uint32{1, 2, 3},
 				FixedRepeatedFixed64:  []uint64{1, 2, 3},
 				FixedRepeatedSfixed32: []int32{1, 2, 3},
@@ -1200,9 +1109,9 @@ func BenchmarkScalars_Proto(b *testing.B) {
 					{0: 3, 31: 0},
 				},
 				FixedRepeatedLargestFieldNumber: []*pb.LargestFieldNumber{
-					{Int32: 123455},
-					{Int32: 876523},
-					{Int32: 576214},
+					{Uint: 123455},
+					{Uint: 876523},
+					{Uint: 576214},
 				},
 
 				ConstRepeatedUint64: []uint64{1, 2, 3},
@@ -1220,18 +1129,14 @@ func BenchmarkScalars_Proto(b *testing.B) {
 	b.Run("marshal/primitives/stack", func(b *testing.B) {
 		for range b.N {
 			s := pb.Scalars{
-				Int8:     31,
-				Int16:    2164,
-				Int32:    216457,
-				Int64:    -2138746,
+				Int8:     -31,
+				Int16:    -2164,
+				Int32:    -12786345,
+				Int64:    98761243,
 				Uint8:    254,
 				Uint16:   21645,
 				Uint32:   32485976,
 				Uint64:   287634,
-				Sint8:    -31,
-				Sint16:   -2164,
-				Sint32:   -12786345,
-				Sint64:   98761243,
 				Fixed32:  98765234,
 				Fixed64:  1234576,
 				Sfixed32: -21348976,
@@ -1240,25 +1145,21 @@ func BenchmarkScalars_Proto(b *testing.B) {
 				String_:  "hi my name is Bob",
 				Bytes:    []byte("hi my name is Bob too"),
 				LargestFieldNumber: &pb.LargestFieldNumber{
-					Int32: 216457,
+					Uint: 216457,
 				},
 			}
 			_, _ = proto.Marshal(&s)
 		}
 	})
 	full := pb.Scalars{
-		Int8:     31,
-		Int16:    2164,
-		Int32:    216457,
-		Int64:    -2138746,
+		Int8:     -31,
+		Int16:    -2164,
+		Int32:    -12786345,
+		Int64:    98761243,
 		Uint8:    254,
 		Uint16:   21645,
 		Uint32:   32485976,
 		Uint64:   287634,
-		Sint8:    -31,
-		Sint16:   -2164,
-		Sint32:   -12786345,
-		Sint64:   98761243,
 		Fixed32:  98765234,
 		Fixed64:  1234576,
 		Sfixed32: -21348976,
@@ -1267,7 +1168,7 @@ func BenchmarkScalars_Proto(b *testing.B) {
 		String_:  "hi my name is Bob",
 		Bytes:    []byte("hi my name is Bob too"),
 		LargestFieldNumber: &pb.LargestFieldNumber{
-			Int32: 216457,
+			Uint: 216457,
 		},
 
 		RepeatedInt8:     []int32{1, 2, 3},
@@ -1278,10 +1179,6 @@ func BenchmarkScalars_Proto(b *testing.B) {
 		RepeatedUint16:   []uint32{1, 2, 3},
 		RepeatedUint32:   []uint32{1, 2, 3},
 		RepeatedUint64:   []uint64{1, 2, 3},
-		RepeatedSint8:    []int32{1, 2, 3},
-		RepeatedSint16:   []int32{1, 2, 3},
-		RepeatedSint32:   []int32{1, 2, 3},
-		RepeatedSint64:   []int64{1, 2, 3},
 		RepeatedFixed32:  []uint32{1, 2, 3},
 		RepeatedFixed64:  []uint64{1, 2, 3},
 		RepeatedSfixed32: []int32{1, 2, 3},
@@ -1290,8 +1187,8 @@ func BenchmarkScalars_Proto(b *testing.B) {
 		RepeatedString:   []string{"hi", "my", "name", "is", "Bob"},
 		RepeatedBytes:    [][]byte{{1, 2, 3}, {4, 5, 6}},
 		RepeatedLargestFieldNumber: []*pb.LargestFieldNumber{
-			{Int32: 123455},
-			{Int32: 876523},
+			{Uint: 123455},
+			{Uint: 876523},
 		},
 
 		FixedRepeatedInt8:     []int32{1, 2, 3},
@@ -1302,10 +1199,6 @@ func BenchmarkScalars_Proto(b *testing.B) {
 		FixedRepeatedUint16:   []uint32{1, 2, 3},
 		FixedRepeatedUint32:   []uint32{1, 2, 3},
 		FixedRepeatedUint64:   []uint64{1, 2, 3},
-		FixedRepeatedSint8:    []int32{1, 2, 3},
-		FixedRepeatedSint16:   []int32{1, 2, 3},
-		FixedRepeatedSint32:   []int32{1, 2, 3},
-		FixedRepeatedSint64:   []int64{1, 2, 3},
 		FixedRepeatedFixed32:  []uint32{1, 2, 3},
 		FixedRepeatedFixed64:  []uint64{1, 2, 3},
 		FixedRepeatedSfixed32: []int32{1, 2, 3},
@@ -1325,9 +1218,9 @@ func BenchmarkScalars_Proto(b *testing.B) {
 			{0: 3, 31: 0},
 		},
 		FixedRepeatedLargestFieldNumber: []*pb.LargestFieldNumber{
-			{Int32: 123455},
-			{Int32: 876523},
-			{Int32: 576214},
+			{Uint: 123455},
+			{Uint: 876523},
+			{Uint: 576214},
 		},
 
 		ConstRepeatedUint64: []uint64{1, 2, 3},
@@ -1340,18 +1233,14 @@ func BenchmarkScalars_Proto(b *testing.B) {
 		},
 	}
 	simple := pb.Scalars{
-		Int8:     31,
-		Int16:    2164,
-		Int32:    216457,
-		Int64:    -2138746,
+		Int8:     -31,
+		Int16:    -2164,
+		Int32:    -12786345,
+		Int64:    98761243,
 		Uint8:    254,
 		Uint16:   21645,
 		Uint32:   32485976,
 		Uint64:   287634,
-		Sint8:    -31,
-		Sint16:   -2164,
-		Sint32:   -12786345,
-		Sint64:   98761243,
 		Fixed32:  98765234,
 		Fixed64:  1234576,
 		Sfixed32: -21348976,
@@ -1360,7 +1249,7 @@ func BenchmarkScalars_Proto(b *testing.B) {
 		String_:  "hi my name is Bob",
 		Bytes:    []byte("hi my name is Bob too"),
 		LargestFieldNumber: &pb.LargestFieldNumber{
-			Int32: 216457,
+			Uint: 216457,
 		},
 	}
 	marshalBenchmarks := []struct {
@@ -1419,41 +1308,41 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 		{
 			name: "int8",
 			proto: &pb.Scalars{
-				Int8: 52,
+				Int8: -52,
 			},
 			f: func(w *canoto.Writer) {
 				canoto.Append(w, canoto.Tag(1, canoto.Varint))
-				canoto.AppendInt[int8](w, 52)
+				canoto.AppendInt[int8](w, -52)
 			},
 		},
 		{
 			name: "int16",
 			proto: &pb.Scalars{
-				Int16: 1234,
+				Int16: -1234,
 			},
 			f: func(w *canoto.Writer) {
 				canoto.Append(w, canoto.Tag(2, canoto.Varint))
-				canoto.AppendInt[int16](w, 1234)
+				canoto.AppendInt[int16](w, -1234)
 			},
 		},
 		{
 			name: "int32",
 			proto: &pb.Scalars{
-				Int32: 121234,
+				Int32: -2136745,
 			},
 			f: func(w *canoto.Writer) {
 				canoto.Append(w, canoto.Tag(3, canoto.Varint))
-				canoto.AppendInt[int32](w, 121234)
+				canoto.AppendInt[int32](w, -2136745)
 			},
 		},
 		{
 			name: "int64",
 			proto: &pb.Scalars{
-				Int64: 259,
+				Int64: -9287364,
 			},
 			f: func(w *canoto.Writer) {
 				canoto.Append(w, canoto.Tag(4, canoto.Varint))
-				canoto.AppendInt[int64](w, 259)
+				canoto.AppendInt[int64](w, -9287364)
 			},
 		},
 		{
@@ -1463,7 +1352,7 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 			},
 			f: func(w *canoto.Writer) {
 				canoto.Append(w, canoto.Tag(5, canoto.Varint))
-				canoto.AppendInt[uint8](w, 9)
+				canoto.AppendUint[uint8](w, 9)
 			},
 		},
 		{
@@ -1473,7 +1362,7 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 			},
 			f: func(w *canoto.Writer) {
 				canoto.Append(w, canoto.Tag(6, canoto.Varint))
-				canoto.AppendInt[uint16](w, 1234)
+				canoto.AppendUint[uint16](w, 1234)
 			},
 		},
 		{
@@ -1483,7 +1372,7 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 			},
 			f: func(w *canoto.Writer) {
 				canoto.Append(w, canoto.Tag(7, canoto.Varint))
-				canoto.AppendInt[uint32](w, 1234)
+				canoto.AppendUint[uint32](w, 1234)
 			},
 		},
 		{
@@ -1493,67 +1382,7 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 			},
 			f: func(w *canoto.Writer) {
 				canoto.Append(w, canoto.Tag(8, canoto.Varint))
-				canoto.AppendInt[uint64](w, 2938567)
-			},
-		},
-		{
-			name: "sint8",
-			proto: &pb.Scalars{
-				Sint8: -52,
-			},
-			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(9, canoto.Varint))
-				canoto.AppendSint[int8](w, -52)
-			},
-		},
-		{
-			name: "sint16",
-			proto: &pb.Scalars{
-				Sint16: -1234,
-			},
-			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(10, canoto.Varint))
-				canoto.AppendSint[int16](w, -1234)
-			},
-		},
-		{
-			name: "sint32",
-			proto: &pb.Scalars{
-				Sint32: -2136745,
-			},
-			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(11, canoto.Varint))
-				canoto.AppendSint[int32](w, -2136745)
-			},
-		},
-		{
-			name: "sint64",
-			proto: &pb.Scalars{
-				Sint64: -9287364,
-			},
-			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(12, canoto.Varint))
-				canoto.AppendSint[int64](w, -9287364)
-			},
-		},
-		{
-			name: "fixed32",
-			proto: &pb.Scalars{
-				Fixed32: 876254,
-			},
-			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(13, canoto.I32))
-				canoto.AppendFint32[uint32](w, 876254)
-			},
-		},
-		{
-			name: "fixed64",
-			proto: &pb.Scalars{
-				Fixed64: 328137645632,
-			},
-			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(14, canoto.I64))
-				canoto.AppendFint64[uint64](w, 328137645632)
+				canoto.AppendUint[uint64](w, 2938567)
 			},
 		},
 		{
@@ -1562,8 +1391,18 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 				Sfixed32: -123463246,
 			},
 			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(15, canoto.I32))
+				canoto.Append(w, canoto.Tag(9, canoto.I32))
 				canoto.AppendFint32[int32](w, -123463246)
+			},
+		},
+		{
+			name: "fixed32",
+			proto: &pb.Scalars{
+				Fixed32: 876254,
+			},
+			f: func(w *canoto.Writer) {
+				canoto.Append(w, canoto.Tag(10, canoto.I32))
+				canoto.AppendFint32[uint32](w, 876254)
 			},
 		},
 		{
@@ -1572,8 +1411,18 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 				Sfixed64: -8762135423,
 			},
 			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(16, canoto.I64))
+				canoto.Append(w, canoto.Tag(11, canoto.I64))
 				canoto.AppendFint64[int64](w, -8762135423)
+			},
+		},
+		{
+			name: "fixed64",
+			proto: &pb.Scalars{
+				Fixed64: 328137645632,
+			},
+			f: func(w *canoto.Writer) {
+				canoto.Append(w, canoto.Tag(12, canoto.I64))
+				canoto.AppendFint64[uint64](w, 328137645632)
 			},
 		},
 		{
@@ -1582,7 +1431,7 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 				Bool: true,
 			},
 			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(17, canoto.Varint))
+				canoto.Append(w, canoto.Tag(13, canoto.Varint))
 				canoto.AppendBool(w, true)
 			},
 		},
@@ -1592,7 +1441,7 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 				String_: "hi mom!",
 			},
 			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(18, canoto.Len))
+				canoto.Append(w, canoto.Tag(14, canoto.Len))
 				canoto.AppendBytes(w, "hi mom!")
 			},
 		},
@@ -1602,18 +1451,18 @@ func TestAppend_ProtoCompatibility(t *testing.T) {
 				Bytes: []byte("hi dad!"),
 			},
 			f: func(w *canoto.Writer) {
-				canoto.Append(w, canoto.Tag(19, canoto.Len))
+				canoto.Append(w, canoto.Tag(15, canoto.Len))
 				canoto.AppendBytes(w, []byte("hi dad!"))
 			},
 		},
 		{
 			name: "largest field number",
 			proto: &pb.LargestFieldNumber{
-				Int32: 1,
+				Uint: 1,
 			},
 			f: func(w *canoto.Writer) {
 				canoto.Append(w, canoto.Tag(canoto.MaxFieldNumber, canoto.Varint))
-				canoto.AppendInt[int32](w, 1)
+				canoto.AppendUint[uint32](w, 1)
 			},
 		},
 	}
