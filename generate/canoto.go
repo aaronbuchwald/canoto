@@ -8,6 +8,7 @@ import (
 	"go/token"
 	"io"
 	"os"
+	"slices"
 	"strings"
 
 	"github.com/StephenButtolph/canoto"
@@ -136,8 +137,7 @@ ${sizeCache}${oneOfCache}}
 // CanotoSpec returns the specification of this canoto message.
 func (*${structName}${generics}) CanotoSpec(types ...reflect.Type) *${selector}Spec {
 	types = append(types, reflect.TypeOf(${structName}${generics}{}))
-	var zero ${structName}${generics}
-	s := &${selector}Spec{
+${zero}	s := &${selector}Spec{
 		Name: "${structName}",
 		Fields: []*${selector}FieldType{
 ${spec}		},
@@ -271,10 +271,12 @@ ${marshal}	return w
 		storeSuffix = "))"
 		concurrencyWarning = ""
 	}
+
+	generics := makeGenerics(m)
 	return writeTemplate(w, structTemplate, map[string]string{
 		"tagConstants":        makeTagConstants(m),
 		"structName":          m.name,
-		"generics":            makeGenerics(m),
+		"generics":            generics,
 		"selector":            canotoSelector,
 		"sizeCache":           makeSizeCache(m),
 		"oneOfCache":          makeOneOfCache(m),
@@ -291,7 +293,31 @@ ${marshal}	return w
 		"storeSuffix":         storeSuffix,
 		"oneOfCacheAccessors": makeOneOfCacheAccessors(m),
 		"marshal":             makeMarshal(m),
+		"zero":                makeZeroVarName(m, generics),
 	})
+}
+
+func makeZeroVarName(m message, generics string) string {
+	zeroIsUnusedTypes := []canotoType{
+		canotoBool,
+		canotoRepeatedBool,
+		canotoString,
+		canotoRepeatedString,
+		canotoBytes,
+		canotoRepeatedBytes,
+	}
+
+	for _, f := range m.fields {
+		if !slices.Contains(zeroIsUnusedTypes, f.canotoType) {
+			return makeTemplate(`	var zero ${structName}${generics}
+`, map[string]string{
+				"structName": m.name,
+				"generics":   generics,
+			})
+		}
+	}
+
+	return ""
 }
 
 func makeGenerics(m message) string {
@@ -2294,10 +2320,14 @@ func writeField(w io.Writer, f field, t messageTemplate) error {
 	return writeTemplate(w, template, f.templateArgs)
 }
 
-func writeTemplate(w io.Writer, template string, args map[string]string) error {
-	s := os.Expand(template, func(key string) string {
+func makeTemplate(template string, args map[string]string) string {
+	return os.Expand(template, func(key string) string {
 		return args[key]
 	})
+}
+
+func writeTemplate(w io.Writer, template string, args map[string]string) error {
+	s := makeTemplate(template, args)
 	_, err := w.Write([]byte(s))
 	return err
 }
