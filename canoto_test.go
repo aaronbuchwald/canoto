@@ -10,7 +10,6 @@ import (
 	"slices"
 	"strconv"
 	"testing"
-	"unicode/utf8"
 
 	"github.com/stretchr/testify/require"
 	"github.com/thepudds/fzgen/fuzzer"
@@ -108,7 +107,7 @@ func testSizeUint[T Uint](t *testing.T, v T) {
 	AppendUint(w, v)
 
 	size := SizeUint(v)
-	require.Len(t, w.B, size)
+	require.Len(t, w.B, int(size)) //#nosec G115 // False positive
 }
 
 func FuzzCountInts_uint8(f *testing.F)  { f.Fuzz(testCountInts[uint8]) }
@@ -129,7 +128,7 @@ func testCountInts[T Uint](t *testing.T, data []byte) {
 	}
 
 	count := CountInts(w.B)
-	require.Len(nums, count)
+	require.Len(nums, int(count)) //#nosec G115 // False positive
 }
 
 func TestReadUint_uint32(t *testing.T) {
@@ -293,7 +292,7 @@ func testSizeInt[T Int](t *testing.T, v T) {
 	AppendInt(w, v)
 
 	size := SizeInt(v)
-	require.Len(t, w.B, size)
+	require.Len(t, w.B, int(size)) //#nosec G115 // False positive
 }
 
 func TestReadInt_int32(t *testing.T) {
@@ -678,7 +677,7 @@ func testSizeBytes[T Bytes](t *testing.T, v T) {
 	AppendBytes(w, v)
 
 	size := SizeBytes(v)
-	require.Len(t, w.B, size)
+	require.Len(t, w.B, int(size)) //#nosec G115 // False positive
 }
 
 func FuzzCountBytes(f *testing.F) {
@@ -703,7 +702,7 @@ func FuzzCountBytes(f *testing.F) {
 
 		count, err := CountBytes(w.B, tag)
 		require.NoError(err)
-		require.Len(bytes, count)
+		require.Len(bytes, int(count)) //#nosec G115 // False positive
 	})
 }
 
@@ -774,7 +773,7 @@ func TestReadBytes(t *testing.T) {
 
 func FuzzAppendBytes_string(f *testing.F) {
 	f.Fuzz(func(t *testing.T, v string) {
-		if !utf8.ValidString(v) {
+		if !ValidString(v) {
 			return
 		}
 
