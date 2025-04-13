@@ -48,7 +48,7 @@ const (
 	MaxFieldNumber = 1<<29 - 1
 
 	// Version is the current version of the canoto library.
-	Version = "v0.16.0"
+	Version = "v0.16.1"
 
 	wireTypeLength = 3
 	wireTypeMask   = 0x07
@@ -60,9 +60,6 @@ const (
 )
 
 var (
-	//go:embed canoto.go
-	code string
-
 	// Code is the actual golang code for this library; including this comment.
 	//
 	// This variable is not used internally, so the compiler is smart enough to
@@ -70,7 +67,9 @@ var (
 	// utilize this variable; at least at the time of writing.
 	//
 	// This can be used during codegen to generate this library.
-	Code, _ = strings.CutPrefix(code, "//go:generate canoto --internal $GOFILE\n\n")
+	//
+	//go:embed canoto.go
+	Code string
 
 	// GeneratedCode is the actual auto-generated golang code for this library.
 	//
