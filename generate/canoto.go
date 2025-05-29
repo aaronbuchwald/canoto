@@ -165,7 +165,7 @@ func (c *${structName}${generics}) UnmarshalCanoto(bytes []byte) error {
 func (c *${structName}${generics}) UnmarshalCanotoFrom(r ${selector}Reader) error {
 	// Zero the struct before unmarshaling.
 	*c = ${structName}${generics}{}
-	c.canotoData.size${storePrefix}uint64(len(r.B))${storeSuffix}
+	${storePrefix}c.canotoData.size${storeJoin}uint64(len(r.B))${storeSuffix}
 
 	var minField uint32
 	for ${selector}HasNext(&r) {
@@ -220,7 +220,7 @@ func (c *${structName}${generics}) CachedCanotoSize() uint64 {
 	if c == nil {
 		return 0
 	}
-	return c.canotoData.size${load}
+	return ${loadPrefix}c.canotoData.size${loadSuffix}
 }${oneOfCacheAccessors}
 
 // MarshalCanoto returns the Canoto representation of this struct.
@@ -251,16 +251,20 @@ ${marshal}	return w
 `
 
 	var (
-		load               string
-		storePrefix        = " = "
-		storeSuffix        string
+		loadPrefix         = "atomic.LoadUint64(&"
+		loadSuffix         = ")"
+		storePrefix        = "atomic.StoreUint64(&"
+		storeJoin          = ", "
+		storeSuffix        = ")"
 		concurrencyWarning = `
 //
-// It is not safe to call this function concurrently.`
+// It is not safe to copy this struct concurrently.`
 	)
-	if m.useAtomic {
-		load = ".Load()"
-		storePrefix = ".Store("
+	if m.noCopy {
+		loadPrefix = ""
+		loadSuffix = ".Load()"
+		storePrefix = ""
+		storeJoin = ".Store("
 		storeSuffix = ")"
 		concurrencyWarning = ""
 	}
@@ -299,8 +303,10 @@ ${marshal}	return w
 		"sizeVars":            makeSizeVars(m),
 		"size":                makeSize(m),
 		"assignSizeVars":      makeAssignSizeVars(m),
-		"load":                load,
+		"loadPrefix":          loadPrefix,
+		"loadSuffix":          loadSuffix,
 		"storePrefix":         storePrefix,
+		"storeJoin":           storeJoin,
 		"storeSuffix":         storeSuffix,
 		"oneOfCacheAccessors": makeOneOfCacheAccessors(m),
 		"marshal":             makeMarshal(m),
@@ -404,7 +410,7 @@ func makeSizeCache(m message) string {
 	}
 
 	sizeType := "uint64"
-	if m.useAtomic {
+	if m.noCopy {
 		sizeType = "atomic.Uint64"
 	}
 
@@ -435,7 +441,7 @@ func makeOneOfCache(m message) string {
 	}
 
 	oneOfType := "uint32"
-	if m.useAtomic {
+	if m.noCopy {
 		oneOfType = "atomic.Uint32"
 	}
 
@@ -903,7 +909,7 @@ func makeUnmarshal(m message) string {
 				return ${selector}ErrInvalidLength
 			}
 			r.B = remainingBytes
-			c.canotoData.${fieldName}Size${storePrefix}uint64(len(msgBytes))${storeSuffix}
+			${storePrefix}c.canotoData.${fieldName}Size${storeJoin}uint64(len(msgBytes))${storeSuffix}
 `,
 			fixedRepeated: `		case ${fieldNumber}:
 			if wireType != ${selector}Len {
@@ -934,7 +940,7 @@ func makeUnmarshal(m message) string {
 				return ${selector}ErrZeroValue
 			}
 			r.B = remainingBytes
-			c.canotoData.${fieldName}Size${storePrefix}uint64(len(msgBytes))${storeSuffix}
+			${storePrefix}c.canotoData.${fieldName}Size${storeJoin}uint64(len(msgBytes))${storeSuffix}
 `,
 		},
 		fints: typeTemplate{
@@ -1812,7 +1818,7 @@ func makeSize(m message) string {
 			fieldSize += ${selector}Size${suffix}(v)
 		}
 		size += uint64(len(canoto__${escapedStructName}__${escapedFieldName}__tag)) + ${selector}SizeUint(fieldSize) + fieldSize
-		c.canotoData.${fieldName}Size${storePrefix}fieldSize${storeSuffix}${sizeOneOf}
+		${storePrefix}c.canotoData.${fieldName}Size${storeJoin}fieldSize${storeSuffix}${sizeOneOf}
 	}
 `,
 			fixedRepeated: `	if !${selector}IsZero(c.${fieldName}) {
@@ -1821,7 +1827,7 @@ func makeSize(m message) string {
 			fieldSize += ${selector}Size${suffix}(v)
 		}
 		size += uint64(len(canoto__${escapedStructName}__${escapedFieldName}__tag)) + ${selector}SizeUint(fieldSize) + fieldSize
-		c.canotoData.${fieldName}Size${storePrefix}fieldSize${storeSuffix}${sizeOneOf}
+		${storePrefix}c.canotoData.${fieldName}Size${storeJoin}fieldSize${storeSuffix}${sizeOneOf}
 	}
 `,
 		},
@@ -1989,16 +1995,16 @@ func makeSize(m message) string {
 
 func makeAssignSizeVars(m message) string {
 	var s strings.Builder
-	if m.useAtomic {
+	if m.noCopy {
 		s.WriteString("\tc.canotoData.size.Store(size)\n")
 	} else {
-		s.WriteString("\tc.canotoData.size = size\n")
+		s.WriteString("\tatomic.StoreUint64(&c.canotoData.size, size)\n")
 	}
 	for _, oneOf := range m.OneOfs() {
-		if m.useAtomic {
+		if m.noCopy {
 			_, _ = fmt.Fprintf(&s, "\tc.canotoData.%sOneOf.Store(%sOneOf)\n", oneOf, oneOf)
 		} else {
-			_, _ = fmt.Fprintf(&s, "\tc.canotoData.%sOneOf = %sOneOf\n", oneOf, oneOf)
+			_, _ = fmt.Fprintf(&s, "\tatomic.StoreUint32(&c.canotoData.%sOneOf, %sOneOf)\n", oneOf, oneOf)
 		}
 	}
 	return s.String()
@@ -2018,22 +2024,25 @@ func makeOneOfCacheAccessors(m message) string {
 // If the struct has been modified since the field was last cached, the returned
 // field number may be incorrect.
 func (c *${structName}${generics}) CachedWhichOneOf${oneOf}() uint32 {
-	return c.canotoData.${oneOf}OneOf${load}
+	return ${loadPrefix}c.canotoData.${oneOf}OneOf${loadSuffix}
 }`
 	var (
-		s        strings.Builder
-		generics = makeGenerics(m)
-		load     string
+		s          strings.Builder
+		generics   = makeGenerics(m)
+		loadPrefix = "atomic.LoadUint32(&"
+		loadSuffix = ")"
 	)
-	if m.useAtomic {
-		load = ".Load()"
+	if m.noCopy {
+		loadPrefix = ""
+		loadSuffix = ".Load()"
 	}
 	for _, oneOf := range m.OneOfs() {
 		_ = writeTemplate(&s, template, map[string]string{
 			"oneOf":      oneOf,
 			"structName": m.name,
 			"generics":   generics,
-			"load":       load,
+			"loadPrefix": loadPrefix,
+			"loadSuffix": loadSuffix,
 		})
 	}
 	return s.String()
@@ -2079,7 +2088,7 @@ func makeMarshal(m message) string {
 			single: intTemplate,
 			repeated: `	if len(c.${fieldName}) != 0 {
 		${selector}Append(&w, canoto__${escapedStructName}__${escapedFieldName}__tag)
-		${selector}AppendUint(&w, c.canotoData.${fieldName}Size${load})
+		${selector}AppendUint(&w, ${loadPrefix}c.canotoData.${fieldName}Size${loadSuffix})
 		for _, v := range c.${fieldName} {
 			${selector}Append${suffix}(&w, v)
 		}
@@ -2087,7 +2096,7 @@ func makeMarshal(m message) string {
 `,
 			fixedRepeated: `	if !${selector}IsZero(c.${fieldName}) {
 		${selector}Append(&w, canoto__${escapedStructName}__${escapedFieldName}__tag)
-		${selector}AppendUint(&w, c.canotoData.${fieldName}Size${load})
+		${selector}AppendUint(&w, ${loadPrefix}c.canotoData.${fieldName}Size${loadSuffix})
 		for _, v := range &c.${fieldName} {
 			${selector}Append${suffix}(&w, v)
 		}

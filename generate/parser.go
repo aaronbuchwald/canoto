@@ -19,8 +19,8 @@ const (
 	canotoTag = "canoto"
 	goBytes   = "[]byte"
 
-	// By default, enable concurrent serialization
-	defaultConcurrent = true
+	// By default, copying of structs is allowed
+	defaultNoCopy = false
 )
 
 var (
@@ -36,7 +36,7 @@ var (
 
 	errUnexpectedNumberOfIdentifiers       = errors.New("unexpected number of identifiers")
 	errInvalidGoType                       = errors.New("invalid Go type")
-	errMalformedCanotoDataTag              = errors.New(`expected "noatomic" got`)
+	errMalformedCanotoDataTag              = errors.New(`expected "nocopy" got`)
 	errMalformedTag                        = errors.New(`expected "type,fieldNumber[,oneof]" got`)
 	errInvalidFieldNumber                  = errors.New("invalid field number")
 	errRepeatedOneOf                       = errors.New("oneof must not be repeated")
@@ -146,12 +146,12 @@ func parse(
 				genericPointers[ident.Name] = currentTypeNumber
 			}
 		}
-		var useAtomic bool
-		useAtomic, err = parseCanotoData(fs, st.Fields)
+		var noCopy bool
+		noCopy, err = parseCanotoData(fs, st.Fields)
 		if err != nil {
 			return false
 		}
-		message.useAtomic = useAtomic
+		message.noCopy = noCopy
 
 		for _, sf := range st.Fields.List {
 			if len(sf.Names) >= 1 && sf.Names[0].Name == "canotoData" {
@@ -165,7 +165,7 @@ func parse(
 			field, hasTag, err = parseField(
 				fs,
 				message.canonicalizedName,
-				useAtomic,
+				noCopy,
 				internal,
 				genericPointers,
 				sf,
@@ -212,6 +212,7 @@ func parse(
 	return packageName, messages, err
 }
 
+// parseCanotoData returns true if copying the struct should not be allowed.
 func parseCanotoData(
 	fs *token.FileSet,
 	afl *ast.FieldList,
@@ -225,7 +226,7 @@ func parseCanotoData(
 		}
 
 		if sf.Tag == nil {
-			return defaultConcurrent, nil
+			return defaultNoCopy, nil
 		}
 
 		rawTag := strings.Trim(sf.Tag.Value, "`")
@@ -236,24 +237,24 @@ func parseCanotoData(
 
 		tag, err := tags.Get(canotoTag)
 		if err != nil {
-			return defaultConcurrent, nil //nolint: nilerr // errors imply the tag was not found
+			return defaultNoCopy, nil //nolint: nilerr // errors imply the tag was not found
 		}
-		if tag.Name != "noatomic" || len(tag.Options) != 0 {
+		if tag.Name != "nocopy" || len(tag.Options) != 0 {
 			return false, fmt.Errorf("%w %q at %s",
 				errMalformedCanotoDataTag,
 				tag.Value(),
 				fs.Position(sf.Pos()),
 			)
 		}
-		return false, nil
+		return true, nil
 	}
-	return defaultConcurrent, nil
+	return defaultNoCopy, nil
 }
 
 func parseField(
 	fs *token.FileSet,
 	canonicalizedStructName string,
-	useAtomic bool,
+	noCopy bool,
 	internal bool,
 	genericTypes map[string]int,
 	af *ast.Field,
@@ -264,13 +265,17 @@ func parseField(
 	}
 
 	var (
-		load        string
-		storePrefix = ` = `
-		storeSuffix string
+		loadPrefix  = "atomic.LoadUint64(&"
+		loadSuffix  = ")"
+		storePrefix = "atomic.StoreUint64(&"
+		storeJoin   = ", "
+		storeSuffix = ")"
 	)
-	if useAtomic {
-		load = ".Load()"
-		storePrefix = ".Store("
+	if noCopy {
+		loadPrefix = ""
+		loadSuffix = ".Load()"
+		storePrefix = ""
+		storeJoin = ".Store("
 		storeSuffix = ")"
 	}
 
@@ -285,27 +290,23 @@ func parseField(
 		sizeOneOfIndent string
 	)
 	if oneOfName != "" {
-		if useAtomic {
-			unmarshalOneOf = fmt.Sprintf(`
+		var unmarshalOneOfTemplate string
+		if noCopy {
+			unmarshalOneOfTemplate = `
 			if c.canotoData.%sOneOf.Swap(%d) != 0 {
 				return %sErrDuplicateOneOf
-			}`,
-				oneOfName,
-				fieldNumber,
-				selector,
-			)
+			}`
 		} else {
-			unmarshalOneOf = fmt.Sprintf(`
-			if c.canotoData.%sOneOf != 0 {
+			unmarshalOneOfTemplate = `
+			if atomic.SwapUint32(&c.canotoData.%sOneOf, %d) != 0 {
 				return %sErrDuplicateOneOf
-			}
-			c.canotoData.%sOneOf = %d`,
-				oneOfName,
-				selector,
-				oneOfName,
-				fieldNumber,
-			)
+			}`
 		}
+		unmarshalOneOf = fmt.Sprintf(unmarshalOneOfTemplate,
+			oneOfName,
+			fieldNumber,
+			selector,
+		)
 
 		assignOneOf := fmt.Sprintf("%sOneOf = %d", oneOfName, fieldNumber)
 		sizeOneOf = "\n\t\t" + assignOneOf
@@ -379,8 +380,10 @@ func parseField(
 		oneOfName:         oneOfName,
 		templateArgs: map[string]string{
 			"selector":          selector,
-			"load":              load,
+			"loadPrefix":        loadPrefix,
+			"loadSuffix":        loadSuffix,
 			"storePrefix":       storePrefix,
+			"storeJoin":         storeJoin,
 			"storeSuffix":       storeSuffix,
 			"escapedStructName": canonicalizedStructName,
 			"fieldNumber":       strconv.FormatUint(uint64(fieldNumber), 10),
