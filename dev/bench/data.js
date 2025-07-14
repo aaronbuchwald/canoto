@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1752505838460,
+  "lastUpdate": 1752507159626,
   "repoUrl": "https://github.com/aaronbuchwald/canoto",
   "entries": {
     "My Project Go Benchmark": [
@@ -6264,6 +6264,6270 @@ window.BENCHMARK_DATA = {
             "value": 4,
             "unit": "allocs/op",
             "extra": "1755334 times\n4 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "aaron.buchwald56@gmail.com",
+            "name": "Aaron Buchwald",
+            "username": "aaronbuchwald"
+          },
+          "committer": {
+            "email": "aaron.buchwald56@gmail.com",
+            "name": "Aaron Buchwald",
+            "username": "aaronbuchwald"
+          },
+          "distinct": true,
+          "id": "f39514a4375613b89d9b3929902d53ff8843777a",
+          "message": "Add empty commit to trigger benchmark run",
+          "timestamp": "2025-07-14T11:25:54-04:00",
+          "tree_id": "8767219ea67a960939e19cc56c5f72dbaa628ad5",
+          "url": "https://github.com/aaronbuchwald/canoto/commit/f39514a4375613b89d9b3929902d53ff8843777a"
+        },
+        "date": 1752507159133,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkTag/1",
+            "value": 14.76,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "79707478 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 14.76,
+            "unit": "ns/op",
+            "extra": "79707478 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "79707478 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "79707478 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1",
+            "value": 14.74,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "79783504 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 14.74,
+            "unit": "ns/op",
+            "extra": "79783504 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "79783504 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "79783504 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1",
+            "value": 14.84,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "81224904 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 14.84,
+            "unit": "ns/op",
+            "extra": "81224904 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "81224904 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "81224904 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1",
+            "value": 14.76,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "80421300 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 14.76,
+            "unit": "ns/op",
+            "extra": "80421300 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "80421300 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "80421300 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1",
+            "value": 14.88,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "81154843 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 14.88,
+            "unit": "ns/op",
+            "extra": "81154843 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "81154843 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "81154843 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1",
+            "value": 14.75,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "79933281 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 14.75,
+            "unit": "ns/op",
+            "extra": "79933281 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "79933281 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "79933281 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1",
+            "value": 15.28,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "80348954 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 15.28,
+            "unit": "ns/op",
+            "extra": "80348954 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "80348954 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "80348954 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1",
+            "value": 14.93,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "78149930 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 14.93,
+            "unit": "ns/op",
+            "extra": "78149930 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "78149930 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "78149930 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1",
+            "value": 14.83,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "79499138 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 14.83,
+            "unit": "ns/op",
+            "extra": "79499138 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "79499138 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "79499138 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1",
+            "value": 14.75,
+            "unit": "ns/op\t       1 B/op\t       1 allocs/op",
+            "extra": "78803593 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - ns/op",
+            "value": 14.75,
+            "unit": "ns/op",
+            "extra": "78803593 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - B/op",
+            "value": 1,
+            "unit": "B/op",
+            "extra": "78803593 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/1 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "78803593 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.61,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "57986412 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.61,
+            "unit": "ns/op",
+            "extra": "57986412 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "57986412 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "57986412 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.68,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "58199101 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.68,
+            "unit": "ns/op",
+            "extra": "58199101 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "58199101 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "58199101 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.7,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "54697971 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.7,
+            "unit": "ns/op",
+            "extra": "54697971 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "54697971 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "54697971 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.62,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "57608000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.62,
+            "unit": "ns/op",
+            "extra": "57608000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "57608000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "57608000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.63,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "56573692 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.63,
+            "unit": "ns/op",
+            "extra": "56573692 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "56573692 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "56573692 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.77,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "58375003 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.77,
+            "unit": "ns/op",
+            "extra": "58375003 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "58375003 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "58375003 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.97,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "57354103 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.97,
+            "unit": "ns/op",
+            "extra": "57354103 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "57354103 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "57354103 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.66,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "61208154 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.66,
+            "unit": "ns/op",
+            "extra": "61208154 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "61208154 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "61208154 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.6,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "57901484 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.6,
+            "unit": "ns/op",
+            "extra": "57901484 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "57901484 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "57901484 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911",
+            "value": 19.75,
+            "unit": "ns/op\t       5 B/op\t       1 allocs/op",
+            "extra": "52772236 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - ns/op",
+            "value": 19.75,
+            "unit": "ns/op",
+            "extra": "52772236 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - B/op",
+            "value": 5,
+            "unit": "B/op",
+            "extra": "52772236 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkTag/536870911 - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "52772236 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.429,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "350503298 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.429,
+            "unit": "ns/op",
+            "extra": "350503298 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "350503298 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "350503298 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.739,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "320063474 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.739,
+            "unit": "ns/op",
+            "extra": "320063474 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "320063474 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "320063474 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.423,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "319408010 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.423,
+            "unit": "ns/op",
+            "extra": "319408010 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "319408010 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "319408010 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.557,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "345987981 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.557,
+            "unit": "ns/op",
+            "extra": "345987981 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "345987981 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "345987981 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.424,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "320744974 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.424,
+            "unit": "ns/op",
+            "extra": "320744974 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "320744974 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "320744974 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.428,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "320987500 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.428,
+            "unit": "ns/op",
+            "extra": "320987500 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "320987500 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "320987500 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.748,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "348017096 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.748,
+            "unit": "ns/op",
+            "extra": "348017096 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "348017096 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "348017096 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.431,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "320702320 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.431,
+            "unit": "ns/op",
+            "extra": "320702320 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "320702320 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "320702320 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.732,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "350175458 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.732,
+            "unit": "ns/op",
+            "extra": "350175458 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "350175458 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "350175458 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel",
+            "value": 3.431,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "321274971 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - ns/op",
+            "value": 3.431,
+            "unit": "ns/op",
+            "extra": "321274971 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "321274971 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hel - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "321274971 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.6226,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6226,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.6229,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6229,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.6227,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6227,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.6232,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6232,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.6226,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6226,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.6225,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6225,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.627,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.627,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.6261,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6261,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.6233,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6233,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo",
+            "value": 0.6235,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6235,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/helloooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.6234,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6234,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.6246,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6246,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.629,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.629,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.6267,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6267,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.6256,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6256,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.6237,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6237,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.6423,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6423,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.6406,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6406,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.6239,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6239,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo",
+            "value": 0.6241,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - ns/op",
+            "value": 0.6241,
+            "unit": "ns/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkHasPrefix/hellooooooooooooooooooooooooooooo - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "1000000000 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2388,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "458214 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2388,
+            "unit": "ns/op",
+            "extra": "458214 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "458214 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "458214 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2489,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "476162 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2489,
+            "unit": "ns/op",
+            "extra": "476162 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "476162 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "476162 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2400,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "474900 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2400,
+            "unit": "ns/op",
+            "extra": "474900 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "474900 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "474900 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2394,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "466551 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2394,
+            "unit": "ns/op",
+            "extra": "466551 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "466551 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "466551 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2384,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "473662 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2384,
+            "unit": "ns/op",
+            "extra": "473662 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "473662 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "473662 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2393,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "468002 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2393,
+            "unit": "ns/op",
+            "extra": "468002 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "468002 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "468002 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2380,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "490891 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2380,
+            "unit": "ns/op",
+            "extra": "490891 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "490891 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "490891 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2387,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "475178 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2387,
+            "unit": "ns/op",
+            "extra": "475178 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "475178 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "475178 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2391,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "472338 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2391,
+            "unit": "ns/op",
+            "extra": "472338 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "472338 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "472338 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack",
+            "value": 2385,
+            "unit": "ns/op\t    3160 B/op\t      25 allocs/op",
+            "extra": "481333 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - ns/op",
+            "value": 2385,
+            "unit": "ns/op",
+            "extra": "481333 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - B/op",
+            "value": 3160,
+            "unit": "B/op",
+            "extra": "481333 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/stack - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "481333 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 759.2,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1559534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 759.2,
+            "unit": "ns/op",
+            "extra": "1559534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1559534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1559534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 765.1,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1579008 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 765.1,
+            "unit": "ns/op",
+            "extra": "1579008 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1579008 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1579008 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 759.5,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1572973 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 759.5,
+            "unit": "ns/op",
+            "extra": "1572973 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1572973 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1572973 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 768.7,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1571688 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 768.7,
+            "unit": "ns/op",
+            "extra": "1571688 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1571688 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1571688 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 761.3,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1557939 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 761.3,
+            "unit": "ns/op",
+            "extra": "1557939 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1557939 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1557939 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 761.3,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1570863 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 761.3,
+            "unit": "ns/op",
+            "extra": "1570863 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1570863 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1570863 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 758.8,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1569265 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 758.8,
+            "unit": "ns/op",
+            "extra": "1569265 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1569265 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1569265 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 761.8,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1574691 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 761.8,
+            "unit": "ns/op",
+            "extra": "1574691 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1574691 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1574691 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 759.3,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1572525 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 759.3,
+            "unit": "ns/op",
+            "extra": "1572525 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1572525 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1572525 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack",
+            "value": 763.1,
+            "unit": "ns/op\t    1944 B/op\t       3 allocs/op",
+            "extra": "1578837 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - ns/op",
+            "value": 763.1,
+            "unit": "ns/op",
+            "extra": "1578837 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - B/op",
+            "value": 1944,
+            "unit": "B/op",
+            "extra": "1578837 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/stack - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1578837 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1442,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "768884 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1442,
+            "unit": "ns/op",
+            "extra": "768884 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "768884 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "768884 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1449,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "747774 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1449,
+            "unit": "ns/op",
+            "extra": "747774 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "747774 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "747774 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1449,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "725750 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1449,
+            "unit": "ns/op",
+            "extra": "725750 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "725750 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "725750 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1446,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "756538 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1446,
+            "unit": "ns/op",
+            "extra": "756538 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "756538 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "756538 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1444,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "777492 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1444,
+            "unit": "ns/op",
+            "extra": "777492 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "777492 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "777492 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1445,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "758770 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1445,
+            "unit": "ns/op",
+            "extra": "758770 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "758770 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "758770 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1447,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "773446 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1447,
+            "unit": "ns/op",
+            "extra": "773446 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "773446 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "773446 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1458,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "758617 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1458,
+            "unit": "ns/op",
+            "extra": "758617 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "758617 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "758617 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1459,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "750878 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1459,
+            "unit": "ns/op",
+            "extra": "750878 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "750878 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "750878 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap",
+            "value": 1445,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "769813 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - ns/op",
+            "value": 1445,
+            "unit": "ns/op",
+            "extra": "769813 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "769813 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "769813 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6359,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "181879 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6359,
+            "unit": "ns/op",
+            "extra": "181879 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "181879 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "181879 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6377,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "184540 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6377,
+            "unit": "ns/op",
+            "extra": "184540 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "184540 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "184540 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6421,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "185010 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6421,
+            "unit": "ns/op",
+            "extra": "185010 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "185010 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "185010 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6367,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "186572 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6367,
+            "unit": "ns/op",
+            "extra": "186572 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "186572 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "186572 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6411,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "180523 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6411,
+            "unit": "ns/op",
+            "extra": "180523 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "180523 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "180523 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6356,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "185888 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6356,
+            "unit": "ns/op",
+            "extra": "185888 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "185888 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "185888 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6453,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "179994 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6453,
+            "unit": "ns/op",
+            "extra": "179994 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "179994 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "179994 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6363,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "183639 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6363,
+            "unit": "ns/op",
+            "extra": "183639 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "183639 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "183639 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6348,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "184534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6348,
+            "unit": "ns/op",
+            "extra": "184534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "184534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "184534 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any",
+            "value": 6379,
+            "unit": "ns/op\t    2560 B/op\t      62 allocs/op",
+            "extra": "185233 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - ns/op",
+            "value": 6379,
+            "unit": "ns/op",
+            "extra": "185233 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - B/op",
+            "value": 2560,
+            "unit": "B/op",
+            "extra": "185233 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/full/any - allocs/op",
+            "value": 62,
+            "unit": "allocs/op",
+            "extra": "185233 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 376.1,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3180346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 376.1,
+            "unit": "ns/op",
+            "extra": "3180346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3180346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3180346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 376.3,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3177514 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 376.3,
+            "unit": "ns/op",
+            "extra": "3177514 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3177514 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3177514 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 374.7,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3058795 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 374.7,
+            "unit": "ns/op",
+            "extra": "3058795 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3058795 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3058795 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 374.7,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3194566 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 374.7,
+            "unit": "ns/op",
+            "extra": "3194566 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3194566 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3194566 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 375.8,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3187182 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 375.8,
+            "unit": "ns/op",
+            "extra": "3187182 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3187182 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3187182 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 375.7,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3196227 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 375.7,
+            "unit": "ns/op",
+            "extra": "3196227 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3196227 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3196227 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 375.6,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3191926 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 375.6,
+            "unit": "ns/op",
+            "extra": "3191926 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3191926 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3191926 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 374.7,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3188450 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 374.7,
+            "unit": "ns/op",
+            "extra": "3188450 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3188450 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3188450 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 374.7,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3192471 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 374.7,
+            "unit": "ns/op",
+            "extra": "3192471 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3192471 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3192471 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap",
+            "value": 375.1,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "3188586 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - ns/op",
+            "value": 375.1,
+            "unit": "ns/op",
+            "extra": "3188586 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "3188586 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "3188586 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 852,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1406164 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 852,
+            "unit": "ns/op",
+            "extra": "1406164 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1406164 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1406164 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 852.8,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1388019 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 852.8,
+            "unit": "ns/op",
+            "extra": "1388019 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1388019 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1388019 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 853.4,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1414917 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 853.4,
+            "unit": "ns/op",
+            "extra": "1414917 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1414917 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1414917 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 850.7,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1409413 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 850.7,
+            "unit": "ns/op",
+            "extra": "1409413 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1409413 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1409413 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 854.4,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1403005 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 854.4,
+            "unit": "ns/op",
+            "extra": "1403005 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1403005 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1403005 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 851.7,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1407736 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 851.7,
+            "unit": "ns/op",
+            "extra": "1407736 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1407736 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1407736 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 850.6,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1410728 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 850.6,
+            "unit": "ns/op",
+            "extra": "1410728 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1410728 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1410728 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 853,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1406056 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 853,
+            "unit": "ns/op",
+            "extra": "1406056 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1406056 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1406056 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 853.9,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1404798 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 853.9,
+            "unit": "ns/op",
+            "extra": "1404798 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1404798 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1404798 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any",
+            "value": 855.9,
+            "unit": "ns/op\t     280 B/op\t       8 allocs/op",
+            "extra": "1397854 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - ns/op",
+            "value": 855.9,
+            "unit": "ns/op",
+            "extra": "1397854 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - B/op",
+            "value": 280,
+            "unit": "B/op",
+            "extra": "1397854 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/marshal/primitives/any - allocs/op",
+            "value": 8,
+            "unit": "allocs/op",
+            "extra": "1397854 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4171,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "278575 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4171,
+            "unit": "ns/op",
+            "extra": "278575 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "278575 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "278575 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4233,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "287904 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4233,
+            "unit": "ns/op",
+            "extra": "287904 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "287904 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "287904 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4251,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "281634 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4251,
+            "unit": "ns/op",
+            "extra": "281634 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "281634 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "281634 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4123,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "284935 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4123,
+            "unit": "ns/op",
+            "extra": "284935 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "284935 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "284935 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4218,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "282824 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4218,
+            "unit": "ns/op",
+            "extra": "282824 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "282824 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "282824 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4210,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "286753 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4210,
+            "unit": "ns/op",
+            "extra": "286753 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "286753 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "286753 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4103,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "282060 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4103,
+            "unit": "ns/op",
+            "extra": "282060 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "282060 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "282060 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4139,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "275041 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4139,
+            "unit": "ns/op",
+            "extra": "275041 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "275041 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "275041 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4110,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "272395 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4110,
+            "unit": "ns/op",
+            "extra": "272395 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "272395 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "272395 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false",
+            "value": 4279,
+            "unit": "ns/op\t    2352 B/op\t      33 allocs/op",
+            "extra": "278758 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - ns/op",
+            "value": 4279,
+            "unit": "ns/op",
+            "extra": "278758 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - B/op",
+            "value": 2352,
+            "unit": "B/op",
+            "extra": "278758 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=false - allocs/op",
+            "value": 33,
+            "unit": "allocs/op",
+            "extra": "278758 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3717,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "313714 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3717,
+            "unit": "ns/op",
+            "extra": "313714 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "313714 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "313714 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3622,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "310542 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3622,
+            "unit": "ns/op",
+            "extra": "310542 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "310542 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "310542 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3638,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "322561 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3638,
+            "unit": "ns/op",
+            "extra": "322561 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "322561 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "322561 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3617,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "314736 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3617,
+            "unit": "ns/op",
+            "extra": "314736 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "314736 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "314736 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3703,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "302839 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3703,
+            "unit": "ns/op",
+            "extra": "302839 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "302839 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "302839 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3634,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "316120 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3634,
+            "unit": "ns/op",
+            "extra": "316120 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "316120 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "316120 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3687,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "312230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3687,
+            "unit": "ns/op",
+            "extra": "312230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "312230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "312230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3627,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "320694 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3627,
+            "unit": "ns/op",
+            "extra": "320694 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "320694 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "320694 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3620,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "318967 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3620,
+            "unit": "ns/op",
+            "extra": "318967 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "318967 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "318967 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true",
+            "value": 3623,
+            "unit": "ns/op\t    2232 B/op\t      18 allocs/op",
+            "extra": "309433 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - ns/op",
+            "value": 3623,
+            "unit": "ns/op",
+            "extra": "309433 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - B/op",
+            "value": 2232,
+            "unit": "B/op",
+            "extra": "309433 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/unsafe=true - allocs/op",
+            "value": 18,
+            "unit": "allocs/op",
+            "extra": "309433 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13450,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "88122 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13450,
+            "unit": "ns/op",
+            "extra": "88122 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "88122 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "88122 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13499,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "88632 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13499,
+            "unit": "ns/op",
+            "extra": "88632 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "88632 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "88632 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13648,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "87812 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13648,
+            "unit": "ns/op",
+            "extra": "87812 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "87812 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "87812 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13479,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "88317 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13479,
+            "unit": "ns/op",
+            "extra": "88317 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "88317 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "88317 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13479,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "88293 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13479,
+            "unit": "ns/op",
+            "extra": "88293 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "88293 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "88293 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13507,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "87739 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13507,
+            "unit": "ns/op",
+            "extra": "87739 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "87739 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "87739 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13546,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "88026 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13546,
+            "unit": "ns/op",
+            "extra": "88026 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "88026 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "88026 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13515,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "88704 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13515,
+            "unit": "ns/op",
+            "extra": "88704 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "88704 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "88704 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13576,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "87384 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13576,
+            "unit": "ns/op",
+            "extra": "87384 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "87384 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "87384 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any",
+            "value": 13507,
+            "unit": "ns/op\t    9744 B/op\t     216 allocs/op",
+            "extra": "88546 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - ns/op",
+            "value": 13507,
+            "unit": "ns/op",
+            "extra": "88546 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - B/op",
+            "value": 9744,
+            "unit": "B/op",
+            "extra": "88546 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/full/any - allocs/op",
+            "value": 216,
+            "unit": "allocs/op",
+            "extra": "88546 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 698.8,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1708404 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 698.8,
+            "unit": "ns/op",
+            "extra": "1708404 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1708404 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1708404 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 698,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1710944 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 698,
+            "unit": "ns/op",
+            "extra": "1710944 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1710944 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1710944 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 698.2,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1720830 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 698.2,
+            "unit": "ns/op",
+            "extra": "1720830 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1720830 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1720830 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 696,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1723232 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 696,
+            "unit": "ns/op",
+            "extra": "1723232 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1723232 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1723232 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 698.2,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1724781 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 698.2,
+            "unit": "ns/op",
+            "extra": "1724781 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1724781 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1724781 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 695.6,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1723410 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 695.6,
+            "unit": "ns/op",
+            "extra": "1723410 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1723410 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1723410 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 698.7,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1717780 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 698.7,
+            "unit": "ns/op",
+            "extra": "1717780 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1717780 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1717780 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 697.6,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1722860 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 697.6,
+            "unit": "ns/op",
+            "extra": "1722860 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1722860 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1722860 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 698.1,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1715158 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 698.1,
+            "unit": "ns/op",
+            "extra": "1715158 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1715158 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1715158 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false",
+            "value": 701.5,
+            "unit": "ns/op\t    1840 B/op\t       3 allocs/op",
+            "extra": "1716346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - ns/op",
+            "value": 701.5,
+            "unit": "ns/op",
+            "extra": "1716346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - B/op",
+            "value": 1840,
+            "unit": "B/op",
+            "extra": "1716346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=false - allocs/op",
+            "value": 3,
+            "unit": "allocs/op",
+            "extra": "1716346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 637.2,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1876004 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 637.2,
+            "unit": "ns/op",
+            "extra": "1876004 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1876004 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1876004 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 636.6,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1889234 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 636.6,
+            "unit": "ns/op",
+            "extra": "1889234 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1889234 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1889234 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 636.8,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1876346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 636.8,
+            "unit": "ns/op",
+            "extra": "1876346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1876346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1876346 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 640.1,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1879150 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 640.1,
+            "unit": "ns/op",
+            "extra": "1879150 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1879150 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1879150 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 635.4,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1884411 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 635.4,
+            "unit": "ns/op",
+            "extra": "1884411 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1884411 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1884411 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 635.2,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1883174 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 635.2,
+            "unit": "ns/op",
+            "extra": "1883174 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1883174 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1883174 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 638.5,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1889145 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 638.5,
+            "unit": "ns/op",
+            "extra": "1889145 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1889145 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1889145 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 633.7,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1895352 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 633.7,
+            "unit": "ns/op",
+            "extra": "1895352 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1895352 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1895352 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 635.4,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1888924 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 635.4,
+            "unit": "ns/op",
+            "extra": "1888924 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1888924 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1888924 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true",
+            "value": 638.8,
+            "unit": "ns/op\t    1792 B/op\t       1 allocs/op",
+            "extra": "1902718 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - ns/op",
+            "value": 638.8,
+            "unit": "ns/op",
+            "extra": "1902718 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - B/op",
+            "value": 1792,
+            "unit": "B/op",
+            "extra": "1902718 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/unsafe=true - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "1902718 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1705,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "664296 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1705,
+            "unit": "ns/op",
+            "extra": "664296 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "664296 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "664296 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1700,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "666114 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1700,
+            "unit": "ns/op",
+            "extra": "666114 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "666114 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "666114 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1707,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "659259 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1707,
+            "unit": "ns/op",
+            "extra": "659259 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "659259 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "659259 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1715,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "663976 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1715,
+            "unit": "ns/op",
+            "extra": "663976 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "663976 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "663976 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1715,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "638035 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1715,
+            "unit": "ns/op",
+            "extra": "638035 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "638035 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "638035 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1704,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "648495 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1704,
+            "unit": "ns/op",
+            "extra": "648495 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "648495 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "648495 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1706,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "619891 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1706,
+            "unit": "ns/op",
+            "extra": "619891 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "619891 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "619891 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1711,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "651390 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1711,
+            "unit": "ns/op",
+            "extra": "651390 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "651390 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "651390 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1707,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "637262 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1707,
+            "unit": "ns/op",
+            "extra": "637262 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "637262 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "637262 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any",
+            "value": 1706,
+            "unit": "ns/op\t    1384 B/op\t      29 allocs/op",
+            "extra": "654595 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - ns/op",
+            "value": 1706,
+            "unit": "ns/op",
+            "extra": "654595 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - B/op",
+            "value": 1384,
+            "unit": "B/op",
+            "extra": "654595 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/unmarshal/primitives/any - allocs/op",
+            "value": 29,
+            "unit": "allocs/op",
+            "extra": "654595 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5452,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "222789 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5452,
+            "unit": "ns/op",
+            "extra": "222789 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "222789 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "222789 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5352,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "220665 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5352,
+            "unit": "ns/op",
+            "extra": "220665 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "220665 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "220665 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5335,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "220197 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5335,
+            "unit": "ns/op",
+            "extra": "220197 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "220197 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "220197 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5332,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "224524 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5332,
+            "unit": "ns/op",
+            "extra": "224524 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "224524 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "224524 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5346,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "224846 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5346,
+            "unit": "ns/op",
+            "extra": "224846 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "224846 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "224846 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5355,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "220800 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5355,
+            "unit": "ns/op",
+            "extra": "220800 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "220800 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "220800 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5323,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "223082 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5323,
+            "unit": "ns/op",
+            "extra": "223082 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "223082 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "223082 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5323,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "223370 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5323,
+            "unit": "ns/op",
+            "extra": "223370 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "223370 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "223370 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5344,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "221582 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5344,
+            "unit": "ns/op",
+            "extra": "221582 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "221582 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "221582 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec",
+            "value": 5326,
+            "unit": "ns/op\t   13968 B/op\t      25 allocs/op",
+            "extra": "222768 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - ns/op",
+            "value": 5326,
+            "unit": "ns/op",
+            "extra": "222768 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - B/op",
+            "value": 13968,
+            "unit": "B/op",
+            "extra": "222768 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/spec - allocs/op",
+            "value": 25,
+            "unit": "allocs/op",
+            "extra": "222768 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 371.1,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3230206 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 371.1,
+            "unit": "ns/op",
+            "extra": "3230206 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3230206 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3230206 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 371,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3231538 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 371,
+            "unit": "ns/op",
+            "extra": "3231538 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3231538 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3231538 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 371.6,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3225584 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 371.6,
+            "unit": "ns/op",
+            "extra": "3225584 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3225584 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3225584 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 370.7,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3236269 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 370.7,
+            "unit": "ns/op",
+            "extra": "3236269 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3236269 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3236269 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 371.7,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3230404 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 371.7,
+            "unit": "ns/op",
+            "extra": "3230404 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3230404 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3230404 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 371.2,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3230047 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 371.2,
+            "unit": "ns/op",
+            "extra": "3230047 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3230047 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3230047 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 371.8,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3229138 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 371.8,
+            "unit": "ns/op",
+            "extra": "3229138 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3229138 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3229138 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 371.3,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3234920 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 371.3,
+            "unit": "ns/op",
+            "extra": "3234920 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3234920 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3234920 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 371.1,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3235406 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 371.1,
+            "unit": "ns/op",
+            "extra": "3235406 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3235406 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3235406 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full",
+            "value": 371.2,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "3232216 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - ns/op",
+            "value": 371.2,
+            "unit": "ns/op",
+            "extra": "3232216 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "3232216 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/full - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "3232216 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112.1,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10711123 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112.1,
+            "unit": "ns/op",
+            "extra": "10711123 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10711123 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10711123 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112.2,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10689447 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112.2,
+            "unit": "ns/op",
+            "extra": "10689447 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10689447 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10689447 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10701314 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112,
+            "unit": "ns/op",
+            "extra": "10701314 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10701314 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10701314 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112.1,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10704608 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112.1,
+            "unit": "ns/op",
+            "extra": "10704608 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10704608 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10704608 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112.2,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10690156 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112.2,
+            "unit": "ns/op",
+            "extra": "10690156 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10690156 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10690156 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10728230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112,
+            "unit": "ns/op",
+            "extra": "10728230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10728230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10728230 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10710146 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112,
+            "unit": "ns/op",
+            "extra": "10710146 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10710146 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10710146 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112.2,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10683342 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112.2,
+            "unit": "ns/op",
+            "extra": "10683342 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10683342 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10683342 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10242098 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112,
+            "unit": "ns/op",
+            "extra": "10242098 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10242098 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10242098 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives",
+            "value": 112,
+            "unit": "ns/op\t       0 B/op\t       0 allocs/op",
+            "extra": "10700196 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - ns/op",
+            "value": 112,
+            "unit": "ns/op",
+            "extra": "10700196 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - B/op",
+            "value": 0,
+            "unit": "B/op",
+            "extra": "10700196 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Canoto/calculateCache/primitives - allocs/op",
+            "value": 0,
+            "unit": "allocs/op",
+            "extra": "10700196 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4083,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "294585 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4083,
+            "unit": "ns/op",
+            "extra": "294585 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "294585 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "294585 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4144,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "281692 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4144,
+            "unit": "ns/op",
+            "extra": "281692 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "281692 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "281692 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4098,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "289533 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4098,
+            "unit": "ns/op",
+            "extra": "289533 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "289533 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "289533 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4087,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "289777 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4087,
+            "unit": "ns/op",
+            "extra": "289777 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "289777 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "289777 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4132,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "286189 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4132,
+            "unit": "ns/op",
+            "extra": "286189 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "286189 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "286189 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4101,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "279817 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4101,
+            "unit": "ns/op",
+            "extra": "279817 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "279817 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "279817 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4088,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "283036 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4088,
+            "unit": "ns/op",
+            "extra": "283036 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "283036 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "283036 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4110,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "284067 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4110,
+            "unit": "ns/op",
+            "extra": "284067 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "284067 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "284067 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4089,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "290089 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4089,
+            "unit": "ns/op",
+            "extra": "290089 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "290089 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "290089 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack",
+            "value": 4143,
+            "unit": "ns/op\t    3888 B/op\t      59 allocs/op",
+            "extra": "276734 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - ns/op",
+            "value": 4143,
+            "unit": "ns/op",
+            "extra": "276734 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - B/op",
+            "value": 3888,
+            "unit": "B/op",
+            "extra": "276734 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/stack - allocs/op",
+            "value": 59,
+            "unit": "allocs/op",
+            "extra": "276734 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 816.5,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1461116 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 816.5,
+            "unit": "ns/op",
+            "extra": "1461116 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1461116 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1461116 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 823,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1474756 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 823,
+            "unit": "ns/op",
+            "extra": "1474756 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1474756 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1474756 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 818.8,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1479880 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 818.8,
+            "unit": "ns/op",
+            "extra": "1479880 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1479880 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1479880 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 822.1,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1464345 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 822.1,
+            "unit": "ns/op",
+            "extra": "1464345 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1464345 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1464345 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 812.7,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1473398 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 812.7,
+            "unit": "ns/op",
+            "extra": "1473398 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1473398 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1473398 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 815.4,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1483860 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 815.4,
+            "unit": "ns/op",
+            "extra": "1483860 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1483860 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1483860 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 811.6,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1473390 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 811.6,
+            "unit": "ns/op",
+            "extra": "1473390 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1473390 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1473390 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 812.6,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1468056 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 812.6,
+            "unit": "ns/op",
+            "extra": "1468056 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1468056 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1468056 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 810.6,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1473398 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 810.6,
+            "unit": "ns/op",
+            "extra": "1473398 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1473398 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1473398 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack",
+            "value": 817.6,
+            "unit": "ns/op\t    1608 B/op\t       4 allocs/op",
+            "extra": "1466425 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - ns/op",
+            "value": 817.6,
+            "unit": "ns/op",
+            "extra": "1466425 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - B/op",
+            "value": 1608,
+            "unit": "B/op",
+            "extra": "1466425 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/stack - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1466425 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2192,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "539275 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2192,
+            "unit": "ns/op",
+            "extra": "539275 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "539275 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "539275 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2160,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "529834 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2160,
+            "unit": "ns/op",
+            "extra": "529834 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "529834 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "529834 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2159,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "517156 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2159,
+            "unit": "ns/op",
+            "extra": "517156 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "517156 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "517156 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2158,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "536092 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2158,
+            "unit": "ns/op",
+            "extra": "536092 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "536092 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "536092 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2164,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "510735 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2164,
+            "unit": "ns/op",
+            "extra": "510735 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "510735 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "510735 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2181,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "527570 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2181,
+            "unit": "ns/op",
+            "extra": "527570 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "527570 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "527570 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2162,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "515779 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2162,
+            "unit": "ns/op",
+            "extra": "515779 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "515779 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "515779 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2151,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "531843 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2151,
+            "unit": "ns/op",
+            "extra": "531843 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "531843 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "531843 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2154,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "531817 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2154,
+            "unit": "ns/op",
+            "extra": "531817 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "531817 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "531817 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap",
+            "value": 2152,
+            "unit": "ns/op\t     896 B/op\t       1 allocs/op",
+            "extra": "526221 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - ns/op",
+            "value": 2152,
+            "unit": "ns/op",
+            "extra": "526221 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - B/op",
+            "value": 896,
+            "unit": "B/op",
+            "extra": "526221 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/full/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "526221 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 464.6,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2590767 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 464.6,
+            "unit": "ns/op",
+            "extra": "2590767 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2590767 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2590767 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 470.5,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2590437 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 470.5,
+            "unit": "ns/op",
+            "extra": "2590437 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2590437 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2590437 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 465.9,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2575806 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 465.9,
+            "unit": "ns/op",
+            "extra": "2575806 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2575806 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2575806 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 467.1,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2568716 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 467.1,
+            "unit": "ns/op",
+            "extra": "2568716 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2568716 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2568716 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 464.1,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2572522 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 464.1,
+            "unit": "ns/op",
+            "extra": "2572522 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2572522 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2572522 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 464.7,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2585524 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 464.7,
+            "unit": "ns/op",
+            "extra": "2585524 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2585524 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2585524 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 461.9,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2579956 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 461.9,
+            "unit": "ns/op",
+            "extra": "2579956 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2579956 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2579956 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 461.4,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2564331 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 461.4,
+            "unit": "ns/op",
+            "extra": "2564331 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2564331 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2564331 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 460.5,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2593797 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 460.5,
+            "unit": "ns/op",
+            "extra": "2593797 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2593797 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2593797 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap",
+            "value": 461.4,
+            "unit": "ns/op\t     128 B/op\t       1 allocs/op",
+            "extra": "2597434 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - ns/op",
+            "value": 461.4,
+            "unit": "ns/op",
+            "extra": "2597434 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - B/op",
+            "value": 128,
+            "unit": "B/op",
+            "extra": "2597434 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/marshal/primitives/heap - allocs/op",
+            "value": 1,
+            "unit": "allocs/op",
+            "extra": "2597434 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5467,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "222704 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5467,
+            "unit": "ns/op",
+            "extra": "222704 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "222704 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "222704 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5256,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "222432 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5256,
+            "unit": "ns/op",
+            "extra": "222432 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "222432 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "222432 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5221,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "224025 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5221,
+            "unit": "ns/op",
+            "extra": "224025 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "224025 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "224025 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5214,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "223569 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5214,
+            "unit": "ns/op",
+            "extra": "223569 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "223569 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "223569 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5207,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "221062 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5207,
+            "unit": "ns/op",
+            "extra": "221062 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "221062 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "221062 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5267,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "224227 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5267,
+            "unit": "ns/op",
+            "extra": "224227 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "224227 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "224227 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5205,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "219510 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5205,
+            "unit": "ns/op",
+            "extra": "219510 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "219510 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "219510 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5210,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "225711 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5210,
+            "unit": "ns/op",
+            "extra": "225711 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "225711 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "225711 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5228,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "218427 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5228,
+            "unit": "ns/op",
+            "extra": "218427 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "218427 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "218427 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full",
+            "value": 5222,
+            "unit": "ns/op\t    3624 B/op\t      82 allocs/op",
+            "extra": "222858 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - ns/op",
+            "value": 5222,
+            "unit": "ns/op",
+            "extra": "222858 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - B/op",
+            "value": 3624,
+            "unit": "B/op",
+            "extra": "222858 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/full - allocs/op",
+            "value": 82,
+            "unit": "allocs/op",
+            "extra": "222858 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 665,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1790466 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 665,
+            "unit": "ns/op",
+            "extra": "1790466 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1790466 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1790466 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 667.8,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1791636 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 667.8,
+            "unit": "ns/op",
+            "extra": "1791636 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1791636 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1791636 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 671,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1795402 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 671,
+            "unit": "ns/op",
+            "extra": "1795402 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1795402 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1795402 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 681.2,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1784354 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 681.2,
+            "unit": "ns/op",
+            "extra": "1784354 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1784354 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1784354 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 669.3,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1797711 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 669.3,
+            "unit": "ns/op",
+            "extra": "1797711 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1797711 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1797711 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 672.5,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1792862 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 672.5,
+            "unit": "ns/op",
+            "extra": "1792862 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1792862 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1792862 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 671.6,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1790245 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 671.6,
+            "unit": "ns/op",
+            "extra": "1790245 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1790245 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1790245 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 670.3,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1805496 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 670.3,
+            "unit": "ns/op",
+            "extra": "1805496 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1805496 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1805496 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 671.3,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1792881 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 671.3,
+            "unit": "ns/op",
+            "extra": "1792881 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1792881 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1792881 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives",
+            "value": 671.6,
+            "unit": "ns/op\t    1504 B/op\t       4 allocs/op",
+            "extra": "1782043 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - ns/op",
+            "value": 671.6,
+            "unit": "ns/op",
+            "extra": "1782043 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - B/op",
+            "value": 1504,
+            "unit": "B/op",
+            "extra": "1782043 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkScalars_Proto/unmarshal/primitives - allocs/op",
+            "value": 4,
+            "unit": "allocs/op",
+            "extra": "1782043 times\n4 procs"
           }
         ]
       }
